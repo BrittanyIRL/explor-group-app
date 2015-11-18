@@ -1,0 +1,3 @@
+== EXPLOR
+
+A Ruby On Rails App built by Julie Sakalys, Auggie Bautista and Brittany Brassell for General Assembly WDI 2015
