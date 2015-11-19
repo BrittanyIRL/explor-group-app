@@ -1,0 +1,2 @@
+module FlickrTestHelper
+end
