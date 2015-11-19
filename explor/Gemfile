@@ -29,11 +29,14 @@ gem 'bourbon'
 # bootstrap, for forms 
 gem 'bootstrap'
 
+# typhoeus for multiple API requests 
+gem 'typhoeus'
+
 # flickraw api
 gem 'flickraw'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
