@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   resources :places, only: [:index]
 
-
+  get 'flickr_test' => 'flickr_test#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
