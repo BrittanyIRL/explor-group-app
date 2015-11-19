@@ -5,8 +5,27 @@ class FlickrTestController < ApplicationController
 		FlickRaw.api_key=ENV["FLICKR_ID"]
 		FlickRaw.shared_secret=ENV["FLICKR_SECRET"]
 		#puts "API KEY HERE LJASLKJLSDKJFLAKSJFLD:" + FlickRaw.api_key
-		@list = flickr.places.find :query => "new brunswick"
-		render json: @list[0]
+		f_place = flickr.places.find :query => "new brunswick"
+		f_latitude = f_place[0]['latitude'].to_f
+		f_longitude = f_place[0]['longitude'].to_f
+		
+		f_radius = 1
+		args = {}
+		args[:bbox] = "#{f_longitude - f_radius},#{f_latitude - f_radius},#{f_longitude + f_radius},#{f_latitude + f_radius}"
+		# requires a limiting factor, so let's give it one
+		args[:min_taken_date] = '1890-01-01 00:00:00'
+		args[:max_taken_date] = '1920-01-01 00:00:00'
+		args[:accuracy] = 1 # the default is street only granularity [16], which most images aren't...
+		discovered_pictures = flickr.photos.search args
+	
+
+		#render json: discovered_pictures
+
+
+		#info = flickr.photos.getInfo(@list[0]:woeid)
+		# render json: list
+		#render info
+
 
 		# id     = list[0].id
 		# secret = list[0].secret
