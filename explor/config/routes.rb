@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
-  resources :places
+  resources :places, only: [:index]
 
 
   # Example of regular route:
