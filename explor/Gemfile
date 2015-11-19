@@ -39,6 +39,12 @@ gem 'flickraw'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+#for env 
+gem 'dotenv-rails'
+
+#foreman included
+gem 'foreman'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
