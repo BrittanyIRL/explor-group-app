@@ -1,2 +1,8 @@
 <h1>Main#results</h1>
 <p>Find me in app/views/main/results.html.erb</p>
+
+<% @results.each do |item| %>
+<div class="well">
+	<h1><%= item["formatted_address"] %></h1>
+</div>
+<% end %>
