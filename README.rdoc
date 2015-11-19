@@ -1,0 +1,2 @@
+# explor-group-app
+Location based need to know for the wanderer in all of us. 
