@@ -2,17 +2,16 @@
 <p>Find me in app/views/main/results.html.erb</p>
 
 <% @results.each do |item| %>
-<div class="well">
-<!-- 	<img src="<%= @photo %>" /> -->
-	<h1><%= item["name"] %></h1>
-	<p>Price Level: <%= item["price_level"] %></p>
-	<p>Rating: <%= item["rating"] %></p>
-	<p>Address: <%= item["vicinity"] %></p>
-	<p>Photo ref: <%= @photo %></p>
+	<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
 
-
-
-</div>
+				<div class="well">
+				<h1><%= item["name"] %></h1>
+				<p>Price Level: <%= item["price_level"] %></p>
+				<p>Rating: <%= item["rating"] %></p>
+				<p>Address: <%= item["vicinity"] %></p>
+				<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @photo_suffix %>" /></p>
+				</div>
+	<% end %>
 <% end %>
 
 
