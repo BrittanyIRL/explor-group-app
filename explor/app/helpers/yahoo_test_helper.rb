@@ -1,0 +1,2 @@
+module YahooTestHelper
+end
