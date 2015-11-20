@@ -63,6 +63,7 @@
 <%= @weather['condition']['text'] %><br>
 
 <% @weather['forecast'].each do |day| %>
+<br><br><br><br><br>
 <% code = day['code'].to_i %>
 <div class="icon icon-<%= weather_codes[code] %>"></div><br>
 <%= day['date'] %><br>
