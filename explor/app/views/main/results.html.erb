@@ -9,7 +9,7 @@
 				<p>Price Level: <%= item["price_level"] %></p>
 				<p>Rating: <%= item["rating"] %></p>
 				<p>Address: <%= item["vicinity"] %></p>
-				<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @photo_suffix %>" /></p>
+				<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" /></p>
 				</div>
 	<% end %>
 <% end %>
