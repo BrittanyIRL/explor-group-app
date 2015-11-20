@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  # for testing yahoo weather
+  get 'yahoo_test' => 'yahoo_test#index'
   # You can have the root of your site routed with "root"
   root 'main#index'
   get 'results' => 'main#results'
