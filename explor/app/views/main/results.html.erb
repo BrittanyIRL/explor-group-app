@@ -1,2 +1,36 @@
 <h1>Main#results</h1>
 <p>Find me in app/views/main/results.html.erb</p>
+
+<% @results.each do |item| %>
+<div class="well">
+	<h1><%= item["name"] %></h1>
+	<p>Price Level: <%= item["price_level"] %></p>
+	<p>Rating: <%= item["rating"] %></p>
+	<p>Address: <%= item["vicinity"] %></p>
+
+</div>
+<% end %>
+
+<h1>Cafes</h1>
+
+<% @cafes.each do |item| %>
+<div class="well">
+	<h1><%= item["name"] %></h1>
+	<p>Price Level: <%= item["price_level"] %></p>
+	<p>Rating: <%= item["rating"] %></p>
+	<p>Address: <%= item["vicinity"] %></p>
+
+</div>
+<% end %>
+
+<h1>Bars</h1>
+
+<% @bars.each do |item| %>
+<div class="well">
+	<h1><%= item["name"] %></h1>
+	<p>Price Level: <%= item["price_level"] %></p>
+	<p>Rating: <%= item["rating"] %></p>
+	<p>Address: <%= item["vicinity"] %></p>
+
+</div>
+<% end %>

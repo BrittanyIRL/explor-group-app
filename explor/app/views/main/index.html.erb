@@ -1,7 +1,7 @@
 <h1>Explor</h1>
 
 <%= bootstrap_form_tag url: '/results', method: :GET do |f| %>
-  <%= f.text_field :q, placeholder: 'Where to??' %>
+  <%= f.search_field :q, placeholder: 'Where to??' %>
   <p><%= f.primary 'Explor' %></p>
 <% end %>
 
