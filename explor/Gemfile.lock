@@ -81,6 +81,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    masonry-rails (0.2.4)
+      railties
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.3)
@@ -166,6 +168,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  masonry-rails
   pg
   rails (= 4.2.4)
   sass-rails (~> 5.0)

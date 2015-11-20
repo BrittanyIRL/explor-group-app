@@ -29,6 +29,9 @@ gem 'bourbon'
 # bootstrap, for forms 
 gem 'bootstrap_form'
 
+#for photo grid
+gem 'masonry-rails'
+
 # typhoeus for multiple API requests 
 gem 'typhoeus'
 
