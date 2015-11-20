@@ -54,15 +54,12 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     debug_inspector (0.0.2)
-<<<<<<< HEAD
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
-=======
     dotenv (2.0.2)
     dotenv-rails (2.0.2)
       dotenv (= 2.0.2)
       railties (~> 4.0)
->>>>>>> 412b412a104f02362e91fd87b08e74b89496a81c
     erubis (2.7.0)
     ethon (0.8.0)
       ffi (>= 1.3.0)
