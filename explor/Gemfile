@@ -35,6 +35,15 @@ gem 'typhoeus'
 # flickraw api
 gem 'flickraw'
 
+# yql gem for yahoo queries
+gem 'yql'
+
+# different yql gem, hope this works
+gem 'ruby-yql'
+
+# rest client for API polls
+gem 'rest-client'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
