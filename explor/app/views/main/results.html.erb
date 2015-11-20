@@ -3,13 +3,19 @@
 
 <% @results.each do |item| %>
 <div class="well">
+<!-- 	<img src="<%= @photo %>" /> -->
 	<h1><%= item["name"] %></h1>
 	<p>Price Level: <%= item["price_level"] %></p>
 	<p>Rating: <%= item["rating"] %></p>
 	<p>Address: <%= item["vicinity"] %></p>
+	<p>Photo ref: <%= @photo %></p>
+
+
 
 </div>
 <% end %>
+
+
 
 <h1>Cafes</h1>
 
@@ -34,3 +40,4 @@
 
 </div>
 <% end %>
+
