@@ -3,6 +3,34 @@
 
 <% @results.each do |item| %>
 <div class="well">
-	<h1><%= item["formatted_address"] %></h1>
+	<h1><%= item["name"] %></h1>
+	<p>Price Level: <%= item["price_level"] %></p>
+	<p>Rating: <%= item["rating"] %></p>
+	<p>Address: <%= item["vicinity"] %></p>
+
+</div>
+<% end %>
+
+<h1>Cafes</h1>
+
+<% @cafes.each do |item| %>
+<div class="well">
+	<h1><%= item["name"] %></h1>
+	<p>Price Level: <%= item["price_level"] %></p>
+	<p>Rating: <%= item["rating"] %></p>
+	<p>Address: <%= item["vicinity"] %></p>
+
+</div>
+<% end %>
+
+<h1>Bars</h1>
+
+<% @bars.each do |item| %>
+<div class="well">
+	<h1><%= item["name"] %></h1>
+	<p>Price Level: <%= item["price_level"] %></p>
+	<p>Rating: <%= item["rating"] %></p>
+	<p>Address: <%= item["vicinity"] %></p>
+
 </div>
 <% end %>
