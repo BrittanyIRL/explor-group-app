@@ -1,7 +1,7 @@
 <h1>Main#results</h1>
 <p>Find me in app/views/main/results.html.erb</p>
 
-<% @results.each do |item| %>
+<% @google_restaurants.each do |item| %>
 	<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
 
 				<div class="well">
@@ -18,7 +18,7 @@
 
 <h1>Cafes</h1>
 
-<% @cafes.each do |item| %>
+<% @google_cafes.each do |item| %>
 <div class="well">
 	<h1><%= item["name"] %></h1>
 	<p>Price Level: <%= item["price_level"] %></p>
@@ -30,7 +30,7 @@
 
 <h1>Bars</h1>
 
-<% @bars.each do |item| %>
+<% @google_bars.each do |item| %>
 <div class="well">
 	<h1><%= item["name"] %></h1>
 	<p>Price Level: <%= item["price_level"] %></p>

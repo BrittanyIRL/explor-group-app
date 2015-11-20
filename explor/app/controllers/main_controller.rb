@@ -1,5 +1,6 @@
 # require 'rubygems'
 require 'rest-client'
+require 'typhoeus'
 
 class MainController < ApplicationController
   def index
@@ -7,42 +8,47 @@ class MainController < ApplicationController
   
   def results
     query = 'boston'
+    #yahoo api call, to trigger first - basing google callback on it
+    #response = RestClient.get 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + query + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
+    #@weather = JSON.parse(response)['query']['results']['channel']['item']
+    #lat = @weather['lat']
+    #lng = @weather['long']
+
 
     @key = "&key=" + ENV['GOOGLE_PLACES_KEY']
-    
-    
-    
-
+    @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
     response_prefix = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
     response_suffix = "&radius=5000&types=restaurant"
     cafe_radius_type = "&radius=5000&types=cafe"
     bar_radius_type = "&radius=5000&types=bar"
+    #coordinates_ref = lat + "," + lng
+
+
 
     hydra = Typhoeus::Hydra.hydra
-
     yahoo_weather_request = Typhoeus::Request.new('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + query + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
-    google_restaurants_request = Typhoeus::Request.new(response_prefix+coordinates_ref+response_suffix+@key)
-    google_cafes_request = Typhoeus::Request.new(response_prefix+coordinates_ref+cafe_radius_type+@key)
-    google_bars_request = Typhoeus::Request.new(response_prefix+coordinates_ref+bar_radius_type+@key)
-    fifth_request = Typhoeus::Request.new("http://example.com/posts/2")  
-    
+    yahoo_weather_request.on_complete do |response|
+      @weather = JSON.parse(response.body)['query']['results']['channel']['item']
+      lat = @weather['lat']
+      lng = @weather['long']
+      coordinates_ref = lat + "," + lng
+
+      @google_restaurants_request = Typhoeus::Request.new(response_prefix+coordinates_ref+response_suffix+@key)
+      @google_cafes_request = Typhoeus::Request.new(response_prefix+coordinates_ref+cafe_radius_type+@key)
+      @google_bars_request = Typhoeus::Request.new(response_prefix+coordinates_ref+bar_radius_type+@key)
+      hydra.queue @google_restaurants_request
+      hydra.queue @google_cafes_request
+      hydra.queue @google_bars_request
+    end
     hydra.queue yahoo_weather_request
-    hydra.queue google_restaurants_request
-    hydra.queue google_cafes_request
-    hydra.queue google_bars_request
-    hydra.queue fifth_request
     hydra.run # this is a blocking call that returns once all requests are complete
-
-        #Yahoo API request 
-    #response = RestClient.get 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + query + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
-    @weather = JSON.parse(response)['query']['results']['channel']['item']
     
-    #lat and lng will go to google to generate API request
-    lat = @weather['lat']
-    lng = @weather['long']
 
-    coordinates_ref = lat + "," + lng
-    #end yahoo callback
+
+    @google_cafes = JSON.parse(@google_cafes_request.response.body)["results"]
+    @google_bars = JSON.parse(@google_bars_request.response.body)["results"]
+    @google_restaurants = JSON.parse(@google_restaurants_request.response.body)["results"]
+    #puts responses
 
     #Google places API request 
     #variables brought over from yahoo request
@@ -52,18 +58,16 @@ class MainController < ApplicationController
 
 
   	#response = RestClient.get response_prefix+coordinates_ref+response_suffix+@key
-  	@results = JSON.parse(response)["results"]
+  	#@results = JSON.parse(response)["results"]
 
     #href for image, needs response from below
-    @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
-
     
   	#cafe_response = RestClient.get response_prefix+coordinates_ref+cafe_radius_type+@key
-  	@cafes = JSON.parse(cafe_response)["results"]
+  	#@cafes = JSON.parse(cafe_response)["results"]
 
     
   	#bar_response = RestClient.get response_prefix+coordinates_ref+bar_radius_type+@key
-  	@bars = JSON.parse(bar_response)["results"]
+  	#@bars = JSON.parse(bar_response)["results"]
 
     #end google api call
 
