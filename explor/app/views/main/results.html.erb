@@ -1,42 +1,51 @@
 <h1>Main#results</h1>
 <p>Find me in app/views/main/results.html.erb</p>
-
-<% @google_restaurants.each do |item| %>
-	<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
-
-				<div class="well">
+<div id="results">
+	<div class="section">Weather</div>
+    <div class="section"> 
+	    <% @google_restaurants.each do |item| %>
+		<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
+			<div class="well">
 				<h1><%= item["name"] %></h1>
 				<p>Price Level: <%= item["price_level"] %></p>
 				<p>Rating: <%= item["rating"] %></p>
 				<p>Address: <%= item["vicinity"] %></p>
 				<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" /></p>
-				</div>
-	<% end %>
-<% end %>
+			</div>
+			<% end %>
+		<% end %>
+    </div>
+    <div class="section">
+    	<h1>Cafes</h1>
 
+		<% @google_cafes.each do |item| %>
+		<div class="well">
+			<h1><%= item["name"] %></h1>
+			<p>Price Level: <%= item["price_level"] %></p>
+			<p>Rating: <%= item["rating"] %></p>
+			<p>Address: <%= item["vicinity"] %></p>
 
+		</div>
+		<% end %>
+    </div>
+    <div class="section">
+    	<h1>Bars</h1>
 
-<h1>Cafes</h1>
-
-<% @google_cafes.each do |item| %>
-<div class="well">
-	<h1><%= item["name"] %></h1>
-	<p>Price Level: <%= item["price_level"] %></p>
-	<p>Rating: <%= item["rating"] %></p>
-	<p>Address: <%= item["vicinity"] %></p>
-
+		<% @google_bars.each do |item| %>
+		<div class="well">
+			<h1><%= item["name"] %></h1>
+			<p>Price Level: <%= item["price_level"] %></p>
+			<p>Rating: <%= item["rating"] %></p>
+			<p>Address: <%= item["vicinity"] %></p>
+		</div>
+		<% end %>	
+    </div>    
 </div>
-<% end %>
 
-<h1>Bars</h1>
 
-<% @google_bars.each do |item| %>
-<div class="well">
-	<h1><%= item["name"] %></h1>
-	<p>Price Level: <%= item["price_level"] %></p>
-	<p>Rating: <%= item["rating"] %></p>
-	<p>Address: <%= item["vicinity"] %></p>
 
-</div>
-<% end %>
+
+
+
+
 
