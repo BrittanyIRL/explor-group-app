@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-  	User.create user_params
+  	user = User.create user_params
   	puts user.errors.inspect
   	if user.valid?
   		session[:user_id] = user.id
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   	else
   		messages = user.errors.map { |k, v| "#{k} #{v}" }
   		flash[:danger] = messages.join(', ')
-  		redirect to signup_path
+  		redirect_to signup_path
   	end
   end
 
