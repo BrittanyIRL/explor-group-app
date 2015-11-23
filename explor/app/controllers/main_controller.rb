@@ -22,9 +22,9 @@ class MainController < ApplicationController
     @key = "&key=" + ENV['GOOGLE_PLACES_KEY']
     @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
     response_prefix = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
-    response_suffix = "&radius=5000&types=restaurant"
-    cafe_radius_type = "&radius=5000&types=cafe"
-    bar_radius_type = "&radius=5000&types=bar"
+    response_suffix = "&radius=5000&types=restaurant|cafe|bar"
+    art_radius_type = "&radius=5000&types=art_gallery|museum"
+    club_radius_type = "&radius=5000&types=night_club"
     #coordinates_ref = lat + "," + lng
 
 
@@ -38,19 +38,19 @@ class MainController < ApplicationController
       coordinates_ref = lat + "," + lng
 
       @google_restaurants_request = Typhoeus::Request.new(response_prefix+coordinates_ref+response_suffix+@key)
-      @google_cafes_request = Typhoeus::Request.new(response_prefix+coordinates_ref+cafe_radius_type+@key)
-      @google_bars_request = Typhoeus::Request.new(response_prefix+coordinates_ref+bar_radius_type+@key)
+      @google_art_request = Typhoeus::Request.new(response_prefix+coordinates_ref+art_radius_type+@key)
+      @google_clubs_request = Typhoeus::Request.new(response_prefix+coordinates_ref+club_radius_type+@key)
       hydra.queue @google_restaurants_request
-      hydra.queue @google_cafes_request
-      hydra.queue @google_bars_request
+      hydra.queue @google_art_request
+      hydra.queue @google_clubs_request
     end
     hydra.queue yahoo_weather_request
     hydra.run # this is a blocking call that returns once all requests are complete
     
 
 
-    @google_cafes = JSON.parse(@google_cafes_request.response.body)["results"]
-    @google_bars = JSON.parse(@google_bars_request.response.body)["results"]
+    @google_art = JSON.parse(@google_art_request.response.body)["results"]
+    @google_clubs = JSON.parse(@google_clubs_request.response.body)["results"]
     @google_restaurants = JSON.parse(@google_restaurants_request.response.body)["results"]
     #puts responses
 
@@ -66,12 +66,12 @@ class MainController < ApplicationController
 
     #href for image, needs response from below
     
-  	#cafe_response = RestClient.get response_prefix+coordinates_ref+cafe_radius_type+@key
-  	#@cafes = JSON.parse(cafe_response)["results"]
+  	#art_response = RestClient.get response_prefix+coordinates_ref+art_radius_type+@key
+  	#@art = JSON.parse(art_response)["results"]
 
     
-  	#bar_response = RestClient.get response_prefix+coordinates_ref+bar_radius_type+@key
-  	#@bars = JSON.parse(bar_response)["results"]
+  	#club_response = RestClient.get response_prefix+coordinates_ref+club_radius_type+@key
+  	#@clubs = JSON.parse(club_response)["results"]
 
     #end google api call
 
