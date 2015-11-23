@@ -61,15 +61,15 @@ $(document).ready(function() {
 
 	$('#results').fullpage({
         //Navigation
-        menu: '#menu',
+        menu: '#resultsMenu',
         lockAnchors: false,
-        anchors:['main', 'restaurants', 'cafes', 'bars'],
-        navigation: false,
+        anchors:['main', 'dining', 'arts', 'nightlife'],
+        navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
-        showActiveTooltip: false,
+        navigationTooltips: ['Weather', "Popular Food and Drink", "Arts", "Nightlife"],
+        showActiveTooltip: true,
         slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+        slidesNavPosition: 'top',
 
         //Scrolling
         css3: true,
@@ -77,15 +77,15 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         fitToSectionDelay: 1000,
-        scrollBar: false,
+        scrollBar: true,
         easing: 'easeInOutCubic',
         easingcss3: 'ease',
         loopBottom: false,
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
-        scrollOverflow: false,
+        normalScrollElements: '',
+        scrollOverflow: true,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
 
@@ -97,11 +97,11 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        resize : false,
-        sectionsColor : ['#ccc', '#fff'],
-        paddingTop: '3em',
+        resize : true,
+        sectionsColor : ['#fff', '#fff'],
+        paddingTop: '10px',
         paddingBottom: '10px',
-        fixedElements: '#header, .footer',
+        fixedElements: '#header, .footer, nav',
         responsiveWidth: 0,
         responsiveHeight: 0,
 

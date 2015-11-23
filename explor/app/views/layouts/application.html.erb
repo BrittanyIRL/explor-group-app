@@ -27,12 +27,12 @@
 			  <% if @current_user %>
 			    <p class="navbar-text navbar-right">Hello, <%= @current_user.name %>.</p>
 			  <% end %>
-
   </nav>
+  <div class="main">
 
 		<%= render 'partials/flash' %>
 		<%= yield %>
-
+  </div> <!--end container -->
 	<div class="modal fade" id="login">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -60,6 +60,13 @@
       </div>
      </div>
   </div>
-
+<footer>
+  <ul>
+    <li>icon</li>
+    <li>icon</li>
+    <li>icon</li>
+    <li>copyright 2015</li>
+  </ul>
+</footer>
 </body>
 </html>

@@ -26,7 +26,7 @@ nav {
 	color: rgba(77, 175, 124, 0.9); /*ocean green*/
 	margin: .25em 0;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	h1 {
 		font-size: 2.8em;
@@ -55,6 +55,35 @@ nav {
 		}
 	}
 }
+
+footer {
+	background-color: rgba(77, 175, 124, 0.5); /*ocean green*/
+	color: gray;
+	margin: .25em 0 0 0;
+	padding: .5em 0;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		width: 100%;
+		float: right;
+
+		li {
+			display: inline;
+			float: right;
+			margin-right: .5em;
+			a {
+				text-decoration: none;
+				margin: auto 1em;
+				vertical-align: top;
+
+			}
+		}
+	}
+}
 /*this acts as a reset */
 body {
 	margin: 0;
@@ -66,7 +95,7 @@ p, li, a {
 }
 
 h1, h2, h3, h4, h5 {
-	font: 100% font-stack-header;
+	font: 100% $font-stack-header;
 }
 
 a {
@@ -76,5 +105,6 @@ a:hover {
 	color: #00B16A;
 	text-decoration: none;
 }
+
 
 
