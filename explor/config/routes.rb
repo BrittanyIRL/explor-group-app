@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
-  resources :places, only: [:index]
+  resources :places
 
   get 'flickr_test' => 'flickr_test#index'
 
