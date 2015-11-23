@@ -1,34 +1,42 @@
 
 <div id="results">
-	<div class="section" id="weather">
+	<div class="section">
 	<!--currently not showing up -->
-	<img href="<%= @f_background[1] %>" />
-	<h2>Weather</h2> 
-
+		<img href="<%= @f_background[1] %>" />
+		<h2>Weather</h2> 
 	</div>
     
     <div class="section"> 
 	    <h2>Popular Food and Drink</h2>
+		
+		
+		<div class="container">
+		<div class="slide">
+		<div class="row">
 		<% @google_restaurants.each do |item| %>
-		<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
-			<div class="slide">
-				<div class="row">
-				<!-- create a while loop to increment "i" and switch to a new slide once 1st loop has started, or so on -->
-				
-				<div class="col-sm-6 col-md-4">
-					<h3><%= item["name"] %></h3>
-					<p>Price Level: <%= item["price_level"] %></p>
-					<p>Rating: <%= item["rating"] %></p>
-					<p>Address: <%= item["vicinity"] %></p>
-					<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
-				<% end %>
-				<!-- repeat looping process with new col-sm-6 col-md-4 -->
-				</div>
+		<% @filtered_results = [] %>
+			<!-- this is a loop to filter out the results with info that we want to display -->			
+			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
+				<% @filtered_results.push(item)%>
 			<% end %>
-	    </div>
-	    </div><!-- end slide -->
+			<% @filtered_results.first(3).each do |item| %>
+			<div class="col-sm-6 col-md-4">	
+				<h3><%= item["name"] %></h3>
+				<p>Price Level: <%= item["price_level"] %></p>
+				<p>Rating: <%= item["rating"] %></p>
+				<p>Address: <%= item["vicinity"] %></p>
+				<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
+			</div>
+			<% end %> <!-- end filtered_results loop -->	
+		<% end %> <!-- end google_restaurants loop -->
+		</div>
+		</div><!-- end slide -->
+		</div>
+	</div>
+		
+		
 
-    </div>
+	    </div> <!-- end section -->
     
     <div class="section">
     <h2>Arts</h2>

@@ -1,3 +1,20 @@
-// Place all the styles related to the places controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+	margin: 6em 0 0 0;
+	padding: 0;
+	width: 100%;
+	.placesTitle {
+		width: 100%;
+		height: 150px;
+		margin: 0;
+		padding-top: 1em;
+		text-align: center;
+		vertical-align: center;
+		font: 300% "Merriweather", serif;
+		background-color: rgba(236,236,236, 0.5);
+	}
+	.location .row {
+		padding: .5em 1.5em;
+	}
+}
+
+
