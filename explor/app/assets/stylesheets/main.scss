@@ -14,3 +14,29 @@
 	border-radius: 5%;
 	margin: 0 auto;
 }
+
+
+.landingPageNavigation {
+	/* color: rgba(77, 175, 124, 0.9); ocean green*/
+	margin: 7em 0;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+/*	top: 5;*/
+	ul {
+		margin: 0 auto;
+		list-style-type: none;
+		padding: auto 25%;	
+		float: left;
+		li {
+			display: inline;
+			float: right;
+			margin-right: .5em;
+			a {
+				text-decoration: none;
+				margin: auto 1em;
+				vertical-align: top;
+			}
+		}
+	}
+}

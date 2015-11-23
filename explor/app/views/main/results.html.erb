@@ -8,20 +8,26 @@
 	</div>
     
     <div class="section"> 
-	    <div class="row">
 	    <h2>Popular Food and Drink</h2>
-		   <% @google_restaurants.each do |item| %>
-		   	<div class="col-sm-6 col-md-4">
-				<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
+		<% @google_restaurants.each do |item| %>
+		<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
+			<div class="slide">
+				<div class="row">
+				<!-- create a while loop to increment "i" and switch to a new slide once 1st loop has started, or so on -->
+				
+				<div class="col-sm-6 col-md-4">
 					<h3><%= item["name"] %></h3>
 					<p>Price Level: <%= item["price_level"] %></p>
 					<p>Rating: <%= item["rating"] %></p>
 					<p>Address: <%= item["vicinity"] %></p>
 					<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
 				<% end %>
-			</div>
+				<!-- repeat looping process with new col-sm-6 col-md-4 -->
+				</div>
 			<% end %>
 	    </div>
+	    </div><!-- end slide -->
+
     </div>
     
     <div class="section">

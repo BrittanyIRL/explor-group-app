@@ -2,10 +2,10 @@ $(document).ready(function() {
     //full page JS functions for landing and results 
     $('#landing').fullpage({
         //Navigation
-        menu: '#menu',
+        //menu: '#menu',
         lockAnchors: false,
         anchors:['explor', 'about', 'developers'],
-        navigation: true,
+        navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['Start Exploring', 'About Explor', 'The Team'],
         showActiveTooltip: true,
@@ -18,7 +18,7 @@ $(document).ready(function() {
         autoScrolling: true,
         fitToSection: true,
         fitToSectionDelay: 1000,
-        scrollBar: false,
+        scrollBar: true,
         easing: 'easeInOutCubic',
         easingcss3: 'ease',
         loopBottom: false,
@@ -38,8 +38,8 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        resize : true,
-        sectionsColor : ['#ccc', '#000'],
+        resize : false, //this shrinks text on viewport size change
+        sectionsColor : ['rgba(162, 222, 208,0.6)', 'rgba(144, 198, 149, 0.6)', 'rgba(104, 195, 163, 0.6)'],
         paddingTop: '10px',
         paddingBottom: '10px',
         fixedElements: '#header, .footer, nav',
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 	$('#results').fullpage({
         //Navigation
-        menu: '#resultsMenu',
+        //menu: '#resultsMenu',
         lockAnchors: false,
         anchors:['main', 'dining', 'arts', 'nightlife'],
         navigation: true,
@@ -97,7 +97,7 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        resize : true,
+        resize : false,
         sectionsColor : ['#fff', '#fff'],
         paddingTop: '10px',
         paddingBottom: '10px',
