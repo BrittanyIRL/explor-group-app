@@ -37,6 +37,7 @@ class MainController < ApplicationController
       # hydra.queue @google_art_request
       # hydra.queue @google_clubs_request
 
+    end
     hydra.queue yahoo_weather_request
     hydra.run # this is a blocking call that returns once all requests are complete
     
