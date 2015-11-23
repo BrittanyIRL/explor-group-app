@@ -117,59 +117,9 @@
 		<% end %>
 		<% end %> <!-- end google_restaurants loop -->
 		</div>
-	</div>
+	</div>    
+</div>    
 
-    
-    <div class="section">
-    <h2>Arts</h2>
-		<% @google_art.each do |item| %>
-			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
-		<div class="well">
-			<h1><%= item["name"] %></h1>
-			<p>Rating: <%= item["rating"] %></p>
-			<p>Address: <%= item["vicinity"] %></p>
-			<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" /></p>
-				<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
--                        <%= f.hidden_field :name, value: @location %>
--                        <%= f.hidden_field :categories, value: item['types'] %>
--                        <%= f.hidden_field :title, value: item['name'] %>
--                        <%= f.hidden_field :price_level, value: item['price_level'] %>
--                        <%= f.hidden_field :rating, value: item['rating'] %>
--                        <%= f.hidden_field :vicinity, value: item['vicinity'] %>
--                        <%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
--                        <%= f.hidden_field :place_id, value: item['place_id'] %>
--                        <%= f.primary %>
--                    <% end %>
-		</div>
-			<% end %>
-		<% end %>
-    </div>
-    
-    <div class="section">
-    <h2>Nightlife</h2>
-		<% @google_clubs.each do |item| %>
-			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
-		<div class="well">
-			<h1><%= item["name"] %></h1>
-			<p>Rating: <%= item["rating"] %></p>
-			<p>Address: <%= item["vicinity"] %></p>
-			<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" /></p>
-				<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace' } do |f| %>
--                        <%= f.hidden_field :name, value: @location %>
--                        <%= f.hidden_field :categories, value: item['types'] %>
--                        <%= f.hidden_field :title, value: item['name'] %>
--                        <%= f.hidden_field :price_level, value: item['price_level'] %>
--                        <%= f.hidden_field :rating, value: item['rating'] %>
--                        <%= f.hidden_field :vicinity, value: item['vicinity'] %>
--                        <%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
--                        <%= f.hidden_field :place_id, value: item['place_id'] %>
--                        <%= f.primary %>
--                   <% end %>
-		</div>
-			<% end %>
-		<% end %>	
-    </div>    
-</div>
 
 
 
