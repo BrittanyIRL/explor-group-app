@@ -7,17 +7,13 @@ class MainController < ApplicationController
   end
   
   def results
-    query = params[:location]['name']
     @location = params[:location]['name']
-    query.gsub!(/\s/,'_')
+    query = @location.gsub(/\s/,'_')
+
+    
+   
     yahoo_prefix = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'
     yahoo_suffix = '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
-    #yahoo api call, to trigger first - basing google callback on it
-    #response = RestClient.get 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + query + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
-    #@weather = JSON.parse(response)['query']['results']['channel']['item']
-    #lat = @weather['lat']
-    #lng = @weather['long']
-
 
     @key = "&key=" + ENV['GOOGLE_PLACES_KEY']
     @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
@@ -25,9 +21,6 @@ class MainController < ApplicationController
     response_suffix = "&radius=5000&types=restaurant|cafe|bar"
     art_radius_type = "&radius=5000&types=art_gallery|museum"
     club_radius_type = "&radius=5000&types=night_club"
-    #coordinates_ref = lat + "," + lng
-
-
 
     hydra = Typhoeus::Hydra.hydra
     yahoo_weather_request = Typhoeus::Request.new(yahoo_prefix+query+yahoo_suffix)
@@ -43,7 +36,7 @@ class MainController < ApplicationController
       hydra.queue @google_restaurants_request
       # hydra.queue @google_art_request
       # hydra.queue @google_clubs_request
-    end
+
     hydra.queue yahoo_weather_request
     hydra.run # this is a blocking call that returns once all requests are complete
     
