@@ -40,7 +40,7 @@ $(document).ready(function() {
         verticalCentered: true,
         resize : true,
         sectionsColor : ['#ccc', '#000'],
-        paddingTop: '0',
+        paddingTop: '10px',
         paddingBottom: '10px',
         fixedElements: '#header, .footer, nav',
         responsiveWidth: 0,

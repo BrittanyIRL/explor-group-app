@@ -24,22 +24,33 @@ $font-stack-header: 'Merriweather', serif;
 /*GLOBAL STYLES */
 nav {
 	color: rgba(77, 175, 124, 0.9); /*ocean green*/
-	margin: 10px 0 0 0;
+	margin: .25em 0;
 	width: 100%;
 	position: absolute;
 	top: 0;
+	h1 {
+		font-size: 2.8em;
+		padding-left: .5em;
+		width: 30%;
+		float: left;
+	}
 	
 	ul {
-		width: 70%;
-		float: right;
 		margin: 0;
 		padding: 0;
-		list-style-type: none;	
+		list-style-type: none;
+		width: 60%;
+		float: right;
+
 		li {
 			display: inline;
+			float: right;
+			margin-right: .5em;
 			a {
 				text-decoration: none;
-				padding: 1em;
+				margin: auto 1em;
+				vertical-align: top;
+
 			}
 		}
 	}
@@ -57,4 +68,13 @@ p, li, a {
 h1, h2, h3, h4, h5 {
 	font: 100% font-stack-header;
 }
+
+a {
+	color: #2ECC71;
+}
+a:hover {
+	color: #00B16A;
+	text-decoration: none;
+}
+
 
