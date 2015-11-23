@@ -1,24 +1,31 @@
 
 <div id="results">
-	<div class="section">Weather</div>
+	<div class="section" id="weather">
+	<!--currently not showing up -->
+	<img href="<%= @f_background[1] %>" />
+	<h2>Weather</h2> 
+
+	</div>
     
     <div class="section"> 
-    <h1>Popular Food and Drink</h1>
-	   <% @google_restaurants.each do |item| %>
-			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
-			<div class="well">
-				<h1><%= item["name"] %></h1>
-				<p>Price Level: <%= item["price_level"] %></p>
-				<p>Rating: <%= item["rating"] %></p>
-				<p>Address: <%= item["vicinity"] %></p>
-				<p>Photo ref: <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" /></p>
+	    <div class="row">
+	    <h2>Popular Food and Drink</h2>
+		   <% @google_restaurants.each do |item| %>
+		   	<div class="col-sm-6 col-md-4">
+				<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
+					<h3><%= item["name"] %></h3>
+					<p>Price Level: <%= item["price_level"] %></p>
+					<p>Rating: <%= item["rating"] %></p>
+					<p>Address: <%= item["vicinity"] %></p>
+					<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
+				<% end %>
 			</div>
 			<% end %>
-		<% end %>
+	    </div>
     </div>
     
     <div class="section">
-    <h1>Arts</h1>
+    <h2>Arts</h2>
 		<% @google_art.each do |item| %>
 			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
 		<div class="well">
@@ -32,7 +39,7 @@
     </div>
     
     <div class="section">
-    <h1>Nightlife</h1>
+    <h2>Nightlife</h2>
 		<% @google_clubs.each do |item| %>
 			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
 		<div class="well">
