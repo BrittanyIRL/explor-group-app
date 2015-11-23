@@ -33,12 +33,12 @@
 	    <h2>Popular Food and Drink</h2>	
 		<% @google_restaurants.each do |item| %>
 		
-			<!-- this is a loop to filter out the results with info that we want to display -->		
-			<% @filtered_results = [] %>	
+		<!-- this is a loop to filter out the results with info that we want to display -->		
+		<% @filtered_results = [] %>	
 			
-			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>			
-				<% @filtered_results.push(item)%>
-			<% end %>
+		<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>			
+			<% @filtered_results.push(item)%>
+		<% end %>
 			
 			<% @filtered_results.first(4).each do |item| %>
 				<!-- <div class="col-sm-6 col-md-4"> -->
