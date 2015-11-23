@@ -2,6 +2,7 @@ class PlacesController < ApplicationController
   before_action :is_authenticated?
   
   def index
+    @locations = @current_user.locations.all
   end
 
   def create
