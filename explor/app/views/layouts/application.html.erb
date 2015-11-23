@@ -15,7 +15,6 @@
 </head>
 <body>
   <nav>
-	    <h1><%= link_to 'Explor', root_path, class: ''%></h1>
 	    <ul class="navigation">
 		    <% if @current_user %>
 		      <li><%= link_to 'Logout', logout_path %></li>
@@ -29,7 +28,7 @@
 			  <% end %>
   </nav>
   <div class="main">
-
+<!--these need styled -->
 		<%= render 'partials/flash' %>
 		<%= yield %>
   </div> <!--end container -->
@@ -61,6 +60,7 @@
      </div>
   </div>
 <footer>
+  <h1><%= link_to 'Explor', root_path, class: ''%></h1>
   <ul>
     <li>icon</li>
     <li>icon</li>

@@ -6,104 +6,104 @@
 	<h2>Weather</h2> 
 
 	<% weather_codes = [
-'weather-windgust',
-'weather-tempest',
-'weather-tempest',
-'weather-tempest',
-'weather-storm-32',
-'weather-hail',
-'weather-hail',
-'weather-hail',
-'weather-mistyrain',
-'weather-mistyrain',
-'weather-hail',
-'weather-rain',
-'weather-rain',
-'weather-snow',
-'weather-cloud-snowflake',
-'weather-snow',
-'weather-snow',
-'weather-hail',
-'weather-hail',
-'weather-fog',
-'weather-fog',
-'weather-fog',
-'weather-fog',
-'weather-windgust',
-'weather-wind',
-'weather-snowflake',
-'weather-cloud',
-'weather-variable-halfmoon',
-'weather-variable-sun',
-'weather-variable-halfmoon',
-'weather-variable-sun',
-'weather-fullmoon',
-'weather-sun',
-'weather-moon',
-'weather-sun',
-'weather-hail',
-'weather-sun',
-'weather-cloud-lightning',
-'weather-cloud-lightning',
-'weather-cloud-lightning',
-'weather-cloud-drop',
-'weather-snowflake',
-'weather-cloud-snowflake',
-'weather-snowflake',
-'weather-variable-fullmoon',
-'weather-storm-32',
-'weather-snow',
-'weather-cloud-lightning',
-''
-] %>
+	'weather-windgust',
+	'weather-tempest',
+	'weather-tempest',
+	'weather-tempest',
+	'weather-storm-32',
+	'weather-hail',
+	'weather-hail',
+	'weather-hail',
+	'weather-mistyrain',
+	'weather-mistyrain',
+	'weather-hail',
+	'weather-rain',
+	'weather-rain',
+	'weather-snow',
+	'weather-cloud-snowflake',
+	'weather-snow',
+	'weather-snow',
+	'weather-hail',
+	'weather-hail',
+	'weather-fog',
+	'weather-fog',
+	'weather-fog',
+	'weather-fog',
+	'weather-windgust',
+	'weather-wind',
+	'weather-snowflake',
+	'weather-cloud',
+	'weather-variable-halfmoon',
+	'weather-variable-sun',
+	'weather-variable-halfmoon',
+	'weather-variable-sun',
+	'weather-fullmoon',
+	'weather-sun',
+	'weather-moon',
+	'weather-sun',
+	'weather-hail',
+	'weather-sun',
+	'weather-cloud-lightning',
+	'weather-cloud-lightning',
+	'weather-cloud-lightning',
+	'weather-cloud-drop',
+	'weather-snowflake',
+	'weather-cloud-snowflake',
+	'weather-snowflake',
+	'weather-variable-fullmoon',
+	'weather-storm-32',
+	'weather-snow',
+	'weather-cloud-lightning',
+	''
+	] %>
 
 
-<%= @weather['title'] %><br>
-<%= @weather['lat'] %><br>
-<%= @weather['long'] %><br>
-<%= @weather['condition']['code'] %><br>
-<%= @weather['condition']['date'] %><br>
-<%= @weather['condition']['temp'] %><br>
-<%= @weather['condition']['text'] %><br>
+	<%= @weather['title'] %><br>
+	<%= @weather['lat'] %><br>
+	<%= @weather['long'] %><br>
+	<%= @weather['condition']['code'] %><br>
+	<%= @weather['condition']['date'] %><br>
+	<%= @weather['condition']['temp'] %><br>
+	<%= @weather['condition']['text'] %><br>
 
-<% @weather['forecast'].each do |day| %>
-<br><br><br><br><br>
-<% code = day['code'].to_i %>
-<div class="icon icon-<%= weather_codes[code] %>"></div><br>
-<%= day['date'] %><br>
-<%= day['day'] %><br>
-<%= day['high'] %><br>
-<%= day['low'] %><br>
-<%= day['text'] %><br>
-<% end %>
+	<% @weather['forecast'].each do |day| %>
+	<br><br><br><br><br>
+	<% code = day['code'].to_i %>
+	<div class="icon icon-<%= weather_codes[code] %>"></div><br>
+	<%= day['date'] %><br>
+	<%= day['day'] %><br>
+	<%= day['high'] %><br>
+	<%= day['low'] %><br>
+	<%= day['text'] %><br>
+	<% end %>
 
 	</div>
     
     <div class="section"> 
-	    <h2>Popular Food and Drink</h2>
-		
-		
+	    <h2>Popular Food and Drink</h2>	
 		<div class="container">
-		<div class="slide">
-		<div class="row">
 		<% @google_restaurants.each do |item| %>
-		<% @filtered_results = [] %>
+		
 			<!-- this is a loop to filter out the results with info that we want to display -->			
-			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
-				<% @filtered_results.push(item)%>
-			<% end %>
+			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>			
+			<% @filtered_results = [] %>
+			<% @filtered_results.push(item)%>
+			
 			<% @filtered_results.first(3).each do |item| %>
-			<div class="col-sm-6 col-md-4">	
-				<h3><%= item["name"] %></h3>
-				<p>Price Level: <%= item["price_level"] %></p>
-				<p>Rating: <%= item["rating"] %></p>
-				<p>Address: <%= item["vicinity"] %></p>
-				<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
-			</div>
+			<div class="slide">
+				<div class="row">
+					<div class="col-sm-6 col-md-4">	
+						<h3><%= item["name"] %></h3>
+						<p>Price Level: <%= item["price_level"] %></p>
+						<p>Rating: <%= item["rating"] %></p>
+						<p>Address: <%= item["vicinity"] %></p>
+						<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
+					</div>
+				</div>
+			</div><!-- end slide -->
 			<% end %> <!-- end filtered_results loop -->	
+		<% end %>
 		<% end %> <!-- end google_restaurants loop -->
-		</div>
-		</div><!-- end slide -->
 		</div>
 	</div>
 
