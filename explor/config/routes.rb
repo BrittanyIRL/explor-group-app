@@ -35,6 +35,11 @@ Rails.application.routes.draw do
   resources :places, only: [:index]
 
   get 'flickr_test' => 'flickr_test#index'
+
+  # autocomplete test
+  get 'search' => 'autocomplete#search'
+  post 'results' => 'main#results'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
