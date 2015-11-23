@@ -38,19 +38,19 @@ class MainController < ApplicationController
       coordinates_ref = lat + "," + lng
 
       @google_restaurants_request = Typhoeus::Request.new(response_prefix+coordinates_ref+response_suffix+@key)
-      @google_art_request = Typhoeus::Request.new(response_prefix+coordinates_ref+art_radius_type+@key)
-      @google_clubs_request = Typhoeus::Request.new(response_prefix+coordinates_ref+club_radius_type+@key)
+      # @google_art_request = Typhoeus::Request.new(response_prefix+coordinates_ref+art_radius_type+@key)
+      # @google_clubs_request = Typhoeus::Request.new(response_prefix+coordinates_ref+club_radius_type+@key)
       hydra.queue @google_restaurants_request
-      hydra.queue @google_art_request
-      hydra.queue @google_clubs_request
+      # hydra.queue @google_art_request
+      # hydra.queue @google_clubs_request
     end
     hydra.queue yahoo_weather_request
     hydra.run # this is a blocking call that returns once all requests are complete
     
 
 
-    @google_art = JSON.parse(@google_art_request.response.body)["results"]
-    @google_clubs = JSON.parse(@google_clubs_request.response.body)["results"]
+    # @google_art = JSON.parse(@google_art_request.response.body)["results"]
+    # @google_clubs = JSON.parse(@google_clubs_request.response.body)["results"]
     @google_restaurants = JSON.parse(@google_restaurants_request.response.body)["results"]
     #puts responses
 
