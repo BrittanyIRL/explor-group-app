@@ -47,7 +47,7 @@
 				<p>Price Level: <%= item["price_level"] %></p>
 				<p>Rating: <%= item["rating"] %></p>
 				<p>Address: <%= item["vicinity"] %></p>
-
+				
 				<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
 		-           <%= f.hidden_field :name, value: @location %>
 		-           <%= f.hidden_field :categories, value: item['types'] %>
