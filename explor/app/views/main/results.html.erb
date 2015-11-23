@@ -2,7 +2,6 @@
 <div id="results">
 	<div class="section">
 	<!--currently not showing up -->
-	<img href="<%= @f_background[1] %>" />
 	<h2>Weather</h2> 
 
 	<% weather_codes = ['weather-windgust','weather-tempest','weather-tempest','weather-tempest','weather-storm-32','weather-hail','weather-hail','weather-hail','weather-mistyrain','weather-mistyrain','weather-hail','weather-rain','weather-rain','weather-snow','weather-cloud-snowflake','weather-snow','weather-snow','weather-hail','weather-hail','weather-fog','weather-fog','weather-fog','weather-fog','weather-windgust','weather-wind', 'weather-snowflake','weather-cloud','weather-variable-halfmoon','weather-variable-sun','weather-variable-halfmoon','weather-variable-sun','weather-fullmoon','weather-sun','weather-moon','weather-sun','weather-hail','weather-sun','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-drop','weather-snowflake','weather-cloud-snowflake','weather-snowflake','weather-variable-fullmoon','weather-storm-32','weather-snow','weather-cloud-lightning',''
@@ -36,8 +35,9 @@
 		
 			<!-- this is a loop to filter out the results with info that we want to display -->		
 			<% @filtered_results = [] %>	
+			
 			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>			
-			<% @filtered_results.push(item)%>
+				<% @filtered_results.push(item)%>
 			<% end %>
 			
 			<% @filtered_results.first(4).each do |item| %>
