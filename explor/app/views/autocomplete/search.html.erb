@@ -1,0 +1,26 @@
+<%= form_for :location, url: results_path, html: { id: "place-search" } do |f|  %>
+  <%= f.text_field :name, id: 'autocomplete' %>
+  <%= f.submit 'Explor' %>
+<% end %>
+
+<script>
+var placeSearch, autocomplete, place;
+
+function initAutocomplete() {
+  // Create the autocomplete object, restricting the search to geographical
+  // location types.
+  autocomplete = new google.maps.places.Autocomplete(
+      /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+      {types: ['geocode']});
+
+  // When the user selects an address from the dropdown, populate the address
+  // fields in the form.
+  autocomplete.addListener('place_changed', function() {
+  	place = autocomplete.getPlace();
+  	// update hidden form input with place data
+  	$('#place-search input[name="location[name]"]').val(place.formatted_address);
+  });
+}
+
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= @maps_key %>&libraries=places&callback=initAutocomplete"></script>

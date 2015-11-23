@@ -1,19 +1,12 @@
-
-	<ul>
-		<li><a href="#explor">Start Exploring</a></li>
-		<li><a href="#about">About Explor</a></li>
-		<li><a href="#developers">The Team</a></li>
-	</ul>
-
 <!-- each 'section' is a fullpage for fullpage.js, the container for fullpage is #landing -->
 <div id="landing">
     <div class="section">
     	<h1>Explor</h1>
-
 		<%= bootstrap_form_tag url: '/results', method: :GET do |f| %>
 		  <%= f.search_field :q, placeholder: 'Where to??' %>
 		  <p><%= f.primary 'Explor' %></p>
 		<% end %>
+		
     </div>
     <div class="section">
     <h2>about this app</h2>
