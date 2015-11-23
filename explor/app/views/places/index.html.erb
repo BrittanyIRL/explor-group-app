@@ -1,19 +1,78 @@
-<div class="location">
-	<h1>LOCATION TBD</h1> <!--background image is from db/flickr -->
-</div>
-<div class="locationDropDown">
-	<div class="row">
-		<div class="col-sm-6 col-sm-4">
-			<div class="infoBox">
-				<img src="#" />
-				<h2>Title</h2>
-				<p>Type of Place</p>
-				<address>Location</address>
-				<p>rating</p>
+<div class="container">
+	<div class="location" id="accordion">
+	  <h2 class="placesTitle">Section 1</h2>
+	   <div class="row">
+			<div class="col-sm-6 col-sm-4">
+				<div class="infoBox">
+					<img src="#" />
+					<h3>Title</h3>
+					<p>Type of Place</p>
+					<address>Location</address>
+					<p>rating</p>
+				</div>
+				<div class="checkBox">
+				 	<p>Been here yet, etc?</p>
+				</div>
 			</div>
-			<div class="checkBox">
-			 	<p>Been here yet, etc?</p>
+	  </div>
+	  <h2 class="placesTitle">Section 2</h2>
+	    <div class="row">
+			<div class="col-sm-6 col-sm-4">
+				<div class="infoBox">
+					<img src="#" />
+					<h3>Title</h3>
+					<p>Type of Place</p>
+					<address>Location</address>
+					<p>rating</p>
+				</div>
+				<div class="checkBox">
+				 	<p>Been here yet, etc?</p>
+				</div>
 			</div>
-		</div>
+	  </div>
+	  <h2 class="placesTitle">Section 3</h2>
+	    <div class="row">
+			<div class="col-sm-6 col-sm-4">
+				<div class="infoBox">
+					<img src="#" />
+					<h3>Title</h3>
+					<p>Type of Place</p>
+					<address>Location</address>
+					<p>rating</p>
+				</div>
+				<div class="checkBox">
+				 	<p>Been here yet, etc?</p>
+				</div>
+			</div>
+	  </div>
+	  <h2 class="placesTitle">Section 4</h2>
+	    <div class="row">
+			<div class="col-sm-6 col-sm-4">
+				<div class="infoBox">
+					<img src="#" />
+					<h3>Title</h3>
+					<p>Type of Place</p>
+					<address>Location</address>
+					<p>rating</p>
+				</div>
+				<div class="checkBox">
+				 	<p>Been here yet, etc?</p>
+				</div>
+			</div>
+	  </div>
 	</div>
-</div>
+ 
+
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+
+    $(function() {
+    $("#accordion").show().accordion({
+        active: false,
+        autoHeight: false,
+        navigation: true,
+        collapsible: true
+    });
+    });
+  </script>
+
