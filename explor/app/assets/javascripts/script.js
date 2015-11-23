@@ -5,12 +5,12 @@ $(document).ready(function() {
         menu: '#menu',
         lockAnchors: false,
         anchors:['explor', 'about', 'developers'],
-        navigation: false,
+        navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide'],
-        showActiveTooltip: false,
+        navigationTooltips: ['Start Exploring', 'About Explor', 'The Team'],
+        showActiveTooltip: true,
         slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+        slidesNavPosition: 'top',
 
         //Scrolling
         css3: true,
@@ -25,8 +25,8 @@ $(document).ready(function() {
         loopTop: false,
         loopHorizontal: true,
         continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
-        scrollOverflow: false,
+        normalScrollElements: '',
+        scrollOverflow: true,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
 
@@ -38,11 +38,11 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        resize : false,
-        sectionsColor : ['#ccc', '#fff'],
-        paddingTop: '3em',
+        resize : true,
+        sectionsColor : ['#ccc', '#000'],
+        paddingTop: '0',
         paddingBottom: '10px',
-        fixedElements: '#header, .footer',
+        fixedElements: '#header, .footer, nav',
         responsiveWidth: 0,
         responsiveHeight: 0,
 

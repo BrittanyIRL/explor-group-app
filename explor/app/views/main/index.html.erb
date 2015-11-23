@@ -1,6 +1,14 @@
 <!-- each 'section' is a fullpage for fullpage.js, the container for fullpage is #landing -->
+
 <div id="landing">
     <div class="section">
+		<div class="landingPageNavigation">
+			<ul>
+		        <li><a href="#explor">Start Exploring</a></li>
+		        <li><a href="#about">About Explor</a></li>
+		        <li><a href="#developers">The Team</a></li>
+		    </ul>
+		</div>
     	<h1>Explor</h1>
 		<%= form_for :location, url: results_path, html: { id: "place-search" } do |f|  %>
           <%= f.text_field :name, id: 'autocomplete' %>
@@ -9,9 +17,24 @@
 		
     </div>
     <div class="section">
+	    <div class="landingPageNavigation">
+			<ul>
+		        <li><a href="#explor">Start Exploring</a></li>
+		        <li><a href="#about">About Explor</a></li>
+		        <li><a href="#developers">The Team</a></li>
+		    </ul>
+		</div>
     <h2>about this app</h2>
     </div>
-    <div class="section">about the creators</div>
+    <div class="section">
+	    <div class="landingPageNavigation">
+			<ul>
+		        <li><a href="#explor">Start Exploring</a></li>
+		        <li><a href="#about">About Explor</a></li>
+		        <li><a href="#developers">The Team</a></li>
+		    </ul>
+		</div>
+		about the creators</div>
 </div>
 
 <script>

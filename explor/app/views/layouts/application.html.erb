@@ -14,28 +14,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container">
-	  <div class="navbar-header navbar-fixed-top">
-
-
-	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-	      <span class="sr-only">Toggle navigation</span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	      <span class="icon-bar"></span>
-	    </button>
-	    <%= link_to 'Explor', root_path, class: 'navbar-brand' %>
-	  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-	  <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav navbar-left">
-            <li><a href="#explor">Start Exploring</a></li>
-            <li><a href="#about">About Explor</a></li>
-            <li><a href="#developers">The Team</a></li>
-        </ul>
-	    <ul class="nav navbar-nav navbar-right">
+  <nav>
+	    <h1><%= link_to 'Explor', root_path, class: 'navbar-brand' %></h1>
+	    <ul class="navigation">
 		    <% if @current_user %>
 		      <li><%= link_to 'Logout', logout_path %></li>
 		    <% else %>
@@ -46,13 +27,11 @@
 			  <% if @current_user %>
 			    <p class="navbar-text navbar-right">Hello, <%= @current_user.name %>.</p>
 			  <% end %>
-	  </div><!-- /.navbar-collapse -->
-  </div>
-</nav>
-	<div class=""> <!-- if you put class as container, bootstrap adds left and right margins, which affects full page JS, so i removed this - julie -->
+
+  </nav>
+
 		<%= render 'partials/flash' %>
 		<%= yield %>
-	</div>
 
 	<div class="modal fade" id="login">
     <div class="modal-dialog">
