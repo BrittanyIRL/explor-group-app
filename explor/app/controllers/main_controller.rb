@@ -19,8 +19,8 @@ class MainController < ApplicationController
     @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
     response_prefix = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
     response_suffix = "&radius=5000&types=restaurant|cafe|bar"
-    art_radius_type = "&radius=5000&types=art_gallery|museum"
-    club_radius_type = "&radius=5000&types=night_club"
+    # art_radius_type = "&radius=5000&types=art_gallery|museum"
+    # club_radius_type = "&radius=5000&types=night_club"
 
     hydra = Typhoeus::Hydra.hydra
     yahoo_weather_request = Typhoeus::Request.new(yahoo_prefix+query+yahoo_suffix)
@@ -36,7 +36,7 @@ class MainController < ApplicationController
       hydra.queue @google_restaurants_request
       # hydra.queue @google_art_request
       # hydra.queue @google_clubs_request
-
+end
     hydra.queue yahoo_weather_request
     hydra.run # this is a blocking call that returns once all requests are complete
     
@@ -106,5 +106,6 @@ class MainController < ApplicationController
   end
 
 end
+
 
 
