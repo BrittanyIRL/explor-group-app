@@ -15,6 +15,7 @@
 </head>
 <body>
   <nav>
+	    <h1><%= link_to 'Explor', '/#explor', class: ''%></h1>
 	    <ul class="navigation">
 		    <% if @current_user %>
 		      <li><%= link_to 'Logout', logout_path %></li>
