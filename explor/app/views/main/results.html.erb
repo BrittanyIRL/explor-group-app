@@ -5,27 +5,110 @@
 	<img href="<%= @f_background[1] %>" />
 	<h2>Weather</h2> 
 
+	<% weather_codes = [
+'weather-windgust',
+'weather-tempest',
+'weather-tempest',
+'weather-tempest',
+'weather-storm-32',
+'weather-hail',
+'weather-hail',
+'weather-hail',
+'weather-mistyrain',
+'weather-mistyrain',
+'weather-hail',
+'weather-rain',
+'weather-rain',
+'weather-snow',
+'weather-cloud-snowflake',
+'weather-snow',
+'weather-snow',
+'weather-hail',
+'weather-hail',
+'weather-fog',
+'weather-fog',
+'weather-fog',
+'weather-fog',
+'weather-windgust',
+'weather-wind',
+'weather-snowflake',
+'weather-cloud',
+'weather-variable-halfmoon',
+'weather-variable-sun',
+'weather-variable-halfmoon',
+'weather-variable-sun',
+'weather-fullmoon',
+'weather-sun',
+'weather-moon',
+'weather-sun',
+'weather-hail',
+'weather-sun',
+'weather-cloud-lightning',
+'weather-cloud-lightning',
+'weather-cloud-lightning',
+'weather-cloud-drop',
+'weather-snowflake',
+'weather-cloud-snowflake',
+'weather-snowflake',
+'weather-variable-fullmoon',
+'weather-storm-32',
+'weather-snow',
+'weather-cloud-lightning',
+''
+] %>
+
+
+<%= @weather['title'] %><br>
+<%= @weather['lat'] %><br>
+<%= @weather['long'] %><br>
+<%= @weather['condition']['code'] %><br>
+<%= @weather['condition']['date'] %><br>
+<%= @weather['condition']['temp'] %><br>
+<%= @weather['condition']['text'] %><br>
+
+<% @weather['forecast'].each do |day| %>
+<br><br><br><br><br>
+<% code = day['code'].to_i %>
+<div class="icon icon-<%= weather_codes[code] %>"></div><br>
+<%= day['date'] %><br>
+<%= day['day'] %><br>
+<%= day['high'] %><br>
+<%= day['low'] %><br>
+<%= day['text'] %><br>
+<% end %>
+
 	</div>
     
     <div class="section"> 
 	    <h2>Popular Food and Drink</h2>
 		<% @google_restaurants.each do |item| %>
 		<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>
-			<div class="slide">
-				<div class="row">
+		<div class="slide">
+			<div class="row">
 				<!-- create a while loop to increment "i" and switch to a new slide once 1st loop has started, or so on -->
-				
 				<div class="col-sm-6 col-md-4">
 					<h3><%= item["name"] %></h3>
 					<p>Price Level: <%= item["price_level"] %></p>
 					<p>Rating: <%= item["rating"] %></p>
 					<p>Address: <%= item["vicinity"] %></p>
 					<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
+					<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+						<%= f.hidden_field :name, value: @location %>
+						<%= f.hidden_field :categories, value: item['types'] %>
+						<%= f.hidden_field :title, value: item['name'] %>
+						<%= f.hidden_field :price_level, value: item['price_level'] %>
+						<%= f.hidden_field :rating, value: item['rating'] %>
+						<%= f.hidden_field :vicinity, value: item['vicinity'] %>
+						<%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
+						<%= f.hidden_field :place_id, value: item['place_id'] %>
+						<%= f.primary %>
+					<% end %>
+
 				<% end %>
 				<!-- repeat looping process with new col-sm-6 col-md-4 -->
 				</div>
 			<% end %>
-	    </div>
+	    	</div>
 	    </div><!-- end slide -->
 
     </div>
