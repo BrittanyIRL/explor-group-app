@@ -7,7 +7,11 @@ class MainController < ApplicationController
   end
   
   def results
-    query = 'boston'
+    query = params[:location]['name']
+    query.gsub!(/\s/,'%')
+    yahoo_prefix = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22'
+    yahoo_suffix = '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
+
     #yahoo api call, to trigger first - basing google callback on it
     #response = RestClient.get 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + query + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys'
     #@weather = JSON.parse(response)['query']['results']['channel']['item']
@@ -26,7 +30,7 @@ class MainController < ApplicationController
 
 
     hydra = Typhoeus::Hydra.hydra
-    yahoo_weather_request = Typhoeus::Request.new('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22' + query + '%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys')
+    yahoo_weather_request = Typhoeus::Request.new(yahoo_prefix+query+yahoo_suffix)
     yahoo_weather_request.on_complete do |response|
       @weather = JSON.parse(response.body)['query']['results']['channel']['item']
       lat = @weather['lat']
