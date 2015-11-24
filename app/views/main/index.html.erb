@@ -17,7 +17,7 @@
     	</div>
 			<div class="container search-bar">	
 				<%= form_for :location, url: results_path, html: { id: "place-search" } do |f|  %>
-          <%= f.text_field :name, id: 'autocomplete' %>
+          <%= f.text_field :name, id: 'autocomplete', placeholder: '' %>
           <%= f.submit 'Explor', id: 'first-page-submit' %>
         <% end %>
 			</div>
