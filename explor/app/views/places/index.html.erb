@@ -1,84 +1,38 @@
-
-<% @locations.each do |l| %>
-	<%= l.name %>
-<% end %>
-
-
 <div class="container">
-	<div class="location" id="accordion">
+<% @locations.each do |l| %>
+	<div class="location">
 	  <!-- location for loop starts -->
-	  <h2 class="placesTitle">Section 1</h2>
+	  <h2 class="placesTitle"><%= l.name %></h2>
 	   <div class="row">
 	   <!-- favorites loop -->
+	    <% l.favorites.each do |f| %>
 			<div class="col-sm-6 col-sm-4">
 				<div class="infoBox">
 					<img src="#" />
-					<h3>Title</h3>
-					<p>Type of Place</p>
-					<address>Location</address>
-					<p>rating</p>
+					<h3><%= f.title %></h3>
+					<p><%= f.categories %></p>
+					<address><%= f.vicinity %></address>
+					<p><%= f.rating %></p>
+					<% if f.price_level %>
+					<p><%= f.price_level %></p>
+					<% end %>
 				</div>
 				<div class="checkBox">
-				 	<p>Been here yet, etc?</p>
+				 	<p>Been there, done that.</p>
 				</div>
 			</div>
+		<% end %>
 	  </div>
-	  <!-- remove this bunch -->
-	  <h2 class="placesTitle">Section 2</h2>
-	    <div class="row">
-			<div class="col-sm-6 col-sm-4">
-				<div class="infoBox">
-					<img src="#" />
-					<h3>Title</h3>
-					<p>Type of Place</p>
-					<address>Location</address>
-					<p>rating</p>
-				</div>
-				<div class="checkBox">
-				 	<p>Been here yet, etc?</p>
-				</div>
-			</div>
-	  </div>
-	  <h2 class="placesTitle">Section 3</h2>
-	    <div class="row">
-			<div class="col-sm-6 col-sm-4">
-				<div class="infoBox">
-					<img src="#" />
-					<h3>Title</h3>
-					<p>Type of Place</p>
-					<address>Location</address>
-					<p>rating</p>
-				</div>
-				<div class="checkBox">
-				 	<p>Been here yet, etc?</p>
-				</div>
-			</div>
-	  </div>
-	  <h2 class="placesTitle">Section 4</h2>
-	    <div class="row">
-			<div class="col-sm-6 col-sm-4">
-				<div class="infoBox">
-					<img src="#" />
-					<h3>Title</h3>
-					<p>Type of Place</p>
-					<address>Location</address>
-					<p>rating</p>
-				</div>
-				<div class="checkBox">
-				 	<p>Been here yet, etc?</p>
-				</div>
-			</div>
-	  </div>
-	  <!-- end remove -->
 	</div>
-	</div>
+<% end %>
+</div>
  
 
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script>
 
     $(function() {
-    $("#accordion").show().accordion({
+    $(".location").show().accordion({
         active: false,
         autoHeight: false,
         navigation: true,

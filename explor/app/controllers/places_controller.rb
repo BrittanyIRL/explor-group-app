@@ -13,6 +13,11 @@ class PlacesController < ApplicationController
   	
   end
 
+  def destroy
+    Favorite.find(params[:id]).destroy
+    redirect_to places_path
+  end
+
   private
 
   def place_params
