@@ -78,7 +78,7 @@ class MainController < ApplicationController
     @f_background = []
     per_page = 1
     #loop through search to find search query per limits of number, safe search, content safe, landscape only 
-    f_bg_id = flickr.photos.search(:tags => query + "landscape", :per_page => per_page, :content_type => 1, :safe_search => 1).each do |p|
+    f_bg_id = flickr.photos.search(:tags => query + "landscape" + "cityscape", :per_page => per_page, :content_type => 1, :safe_search => 1).each do |p|
 
         f_info = flickr.photos.getInfo(:photo_id => p.id)
         #grab url
@@ -90,18 +90,6 @@ class MainController < ApplicationController
       end
     #spits out results in console, remove this when we are in production
     #puts @f_background
-
-    #grid gallery stored here
-    @f_grid = []
-    f_grid_id = flickr.photos.search(:tags => query + "nature", :per_page => 6, :content_type => 1, :safe_search => 1).each do |p|
-
-        f_info = flickr.photos.getInfo(:photo_id => p.id)
-        #grab url
-        url = FlickRaw.url(f_info)
-        title = f_info.title
-        #push to array
-        @f_grid.push(url)
-      end
   end
 
 end

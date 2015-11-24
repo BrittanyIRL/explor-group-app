@@ -73,7 +73,7 @@ $(document).ready(function() {
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['Weather', "Popular Food and Drink", "Arts", "Nightlife", "Grid"],
-        showActiveTooltip: true,
+        showActiveTooltip: false,
         slidesNavigation: true,
         slidesNavPosition: 'top',
 

@@ -3,6 +3,20 @@
 
 /*imported fonts*/
 @import url(https://fonts.googleapis.com/css?family=Raleway|Merriweather:400,700);
+/*@font-face {
+	font-family: "airport"; src: url('fonts/Airport.ttf')
+}*/
+
+@font-face {
+	font-family: "roboto"; 
+	src: url('/assets/stylesheets/fonts/Roboto-Thin.ttf')
+}
+
+@font-face {
+  font-family: 'airport';
+  src: font-url('Airport.ttf');
+}
+
 /*declaring variables for SASS*/
 $font-stack-body: 'Raleway', sans-serif;
 $font-stack-header: 'Merriweather', serif;
