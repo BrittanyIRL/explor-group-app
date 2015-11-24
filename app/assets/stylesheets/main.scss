@@ -197,15 +197,37 @@ h2.location {
 }
 
 .weatherBackground {
+ 	z-index: 10;
  	width: 100%;
- 	height: 850px;
- 	background: linear-gradient(#FFB03B , #468966 , transparent 60%),
-             linear-gradient(0deg, #fff, transparent)
-             #8E2800 url('@f_background[0]');
-    background-repeat: no-repeat;
-    background-position: center;
- 	background-size: cover;
+ 	position: static;
+ 	top: 0;
+ 	background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #24221F),
+	color-stop(0, #FFFFFF),
+	color-stop(1, #5E7C88)
+	);
+	background-image: -o-linear-gradient(bottom, #24221F 0%, #FFFFFF 0%, #5E7C88 100%);
+	background-image: -moz-linear-gradient(bottom, #24221F 0%, #FFFFFF 0%, #5E7C88 100%);
+	background-image: -webkit-linear-gradient(bottom, #24221F 0%, #FFFFFF 0%, #5E7C88 100%);
+	background-image: -ms-linear-gradient(bottom, #24221F 0%, #FFFFFF 0%, #5E7C88 100%);
+	background-image: linear-gradient(to bottom, #24221F 0%, #FFFFFF 0%, #5E7C88 100%);
+
+	img {
+		z-index: -999;
+		top: 0;
+		width: 100%;
+ 		height: 80%;
+		object-fit: cover;
+		position: static;
+
+	}
 }
+
+
+
 
 .weather-forecast {
 	.current-conditions {
