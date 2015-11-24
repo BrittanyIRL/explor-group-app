@@ -137,7 +137,6 @@
 		padding: 0;
 		float:left;
 		box-sizing: inherit;
-
 		.columnImage {
 			width: 90%;
     		height: 200px;
@@ -145,25 +144,72 @@
     		overflow: hidden;
     		border-radius: 5px;
 		}
-		.columnImage:hover input {
-			display: inline-block;
-		}
-		.columnImage input {
-		    position:absolute;
-		    display:none;
-		}
-
-		.column input.submit {
-		    top:0;
-		    left:0;
-		}
-
 		h2, p {
 			margin: 0;
 			padding: 0;
 		}
 	}
 }
+
+/* ---- isotope ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+/* weather */
+h2.location {
+	text-align: left;
+}
+
+.weather-forecast {
+	.current-conditions {
+		width: 30%;
+		display: inline-block;
+		.temp {
+			font-size: 28px;
+		}
+	}
+	.daily-forecast {
+		width: 12%;
+		display: inline-block;
+		text-align: center;
+	}
+	.weather-icon {
+		padding: 5px;
+	}
+	.temp-high {
+		color: red;
+		margin-right: 10px;
+	}
+	.temp-low {
+		color: blue;
+	}
+}
+
 
 
 

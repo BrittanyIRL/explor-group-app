@@ -19,8 +19,8 @@ class MainController < ApplicationController
     @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
     response_prefix = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
     response_suffix = "&radius=5000&types=restaurant|cafe|bar"
-    # art_radius_type = "&radius=5000&types=art_gallery|museum"
-    # club_radius_type = "&radius=5000&types=night_club"
+    art_radius_type = "&radius=5000&types=art_gallery|museum"
+    club_radius_type = "&radius=5000&types=night_club"
 
     hydra = Typhoeus::Hydra.hydra
     yahoo_weather_request = Typhoeus::Request.new(yahoo_prefix+query+yahoo_suffix)
@@ -31,11 +31,11 @@ class MainController < ApplicationController
       coordinates_ref = lat + "," + lng
 
       @google_restaurants_request = Typhoeus::Request.new(response_prefix+coordinates_ref+response_suffix+@key)
-      # @google_art_request = Typhoeus::Request.new(response_prefix+coordinates_ref+art_radius_type+@key)
-      # @google_clubs_request = Typhoeus::Request.new(response_prefix+coordinates_ref+club_radius_type+@key)
+      @google_art_request = Typhoeus::Request.new(response_prefix+coordinates_ref+art_radius_type+@key)
+      @google_clubs_request = Typhoeus::Request.new(response_prefix+coordinates_ref+club_radius_type+@key)
       hydra.queue @google_restaurants_request
-      # hydra.queue @google_art_request
-      # hydra.queue @google_clubs_request
+      hydra.queue @google_art_request
+      hydra.queue @google_clubs_request
     end
 
     hydra.queue yahoo_weather_request
@@ -43,8 +43,8 @@ class MainController < ApplicationController
     
 
 
-    # @google_art = JSON.parse(@google_art_request.response.body)["results"]
-    # @google_clubs = JSON.parse(@google_clubs_request.response.body)["results"]
+    @google_art = JSON.parse(@google_art_request.response.body)["results"]
+    @google_clubs = JSON.parse(@google_clubs_request.response.body)["results"]
     @google_restaurants = JSON.parse(@google_restaurants_request.response.body)["results"]
     #puts responses
 
@@ -93,17 +93,15 @@ class MainController < ApplicationController
 
     #grid gallery stored here
     @f_grid = []
-    f_grid_id = flickr.photos.search(:tags => query + "travel", :per_page => 15, :content_type => 1, :safe_search => 1).each do |p|
+    f_grid_id = flickr.photos.search(:tags => query + "nature", :per_page => 6, :content_type => 1, :safe_search => 1).each do |p|
 
         f_info = flickr.photos.getInfo(:photo_id => p.id)
         #grab url
-        url = FlickRaw.url_s(f_info)
+        url = FlickRaw.url(f_info)
         title = f_info.title
         #push to array
-        @f_grid.push(url, title)
+        @f_grid.push(url)
       end
-    #puts @f_grid
-
   end
 
 end

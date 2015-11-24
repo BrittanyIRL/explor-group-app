@@ -32,9 +32,13 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
+<<<<<<< HEAD
   delete 'places' => 'places#destroy'
 
   resources :places
+=======
+  resources :places, :favorites
+>>>>>>> 28270da35ab7ec79f44e86e42e99018af74ed006
 
   get 'flickr_test' => 'flickr_test#index'
 

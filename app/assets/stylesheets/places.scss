@@ -1,19 +1,41 @@
 .container {
-	margin: 6em 0 0 0;
+	margin: 30px 0 0 0;
 	padding: 0;
 	width: 100%;
-	.placesTitle {
-		width: 100%;
-		height: 150px;
-		margin: 0;
-		padding-top: 1em;
-		text-align: center;
-		vertical-align: center;
-		font: 300% "Merriweather", serif;
-		background-color: rgba(236,236,236, 0.5);
-	}
-	.location .row {
-		padding: .5em 1.5em;
+	.location {
+		.location-favorites {
+			float: left;
+			margin: 10px;
+			line-height: 20px;
+		}
+		.location-delete {
+			float: right;
+			margin: 10px;
+			line-height: 20px;
+		}
+			.placesTitle {
+				height: 20vh;
+				line-height: 20vh;
+				text-align: center;
+				vertical-align: middle;
+				margin: 0;
+				background-color: rgba(236,236,236, 0.5);
+				border-bottom: solid 1px black;
+					h2 {
+						margin: 0px;
+						cursor: pointer;
+						font: 300% "Raleway", sans-serif;
+						text-transform: uppercase;
+						line-height: 20vh;
+							.badge {
+								font-family: "Merriweather", sans-serif;
+								font-size: 12px;
+							}
+					}
+			}
+			.location .row {
+				padding: .5em 1.5em;
+			}
 	}
 }
 
