@@ -49,7 +49,7 @@ $(document).ready(function() {
         paddingTop: '10px',
         paddingBottom: '10px',
         fixedElements: '#header, .footer, nav',
-        responsiveWidth: 0,
+        responsiveWidth: 800,
         responsiveHeight: 0,
 
         //Custom selectors
@@ -108,7 +108,7 @@ $(document).ready(function() {
         paddingTop: '20px',
         paddingBottom: '20px',
         fixedElements: 'footer, nav',
-        responsiveWidth: 0,
+        responsiveWidth: 600,
         responsiveHeight: 0,
 
         //Custom selectors
