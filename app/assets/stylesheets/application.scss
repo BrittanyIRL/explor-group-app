@@ -9,15 +9,15 @@
 
 @font-face {
 	font-family: "roboto"; 
-	src: url('/assets/fonts/Roboto-Thin.ttf')
+	src: url('/assets/stylesheets/fonts/Roboto-Thin.ttf')
 }
 
 @font-face {
   font-family: 'airport';
-  src: url(/assets/fonts/Airport.ttf);
-  src: url(/assets/fonts/Airport.ttf) format("embedded-opentype"), 
-    url(/assets/fonts/Airport.ttf) format("truetype"), 
-    url(/assets/fonts/Airport.ttf) format("woff");
+  src: url(/assets/stylesheets/fonts/Airport.ttf);
+  src: url(/assets/stylesheets/fonts/Airport.ttf) format("embedded-opentype"), 
+    url(/assets/fonts/stylesheets/Airport.ttf) format("truetype"), 
+    url(/assets/fonts/stylesheets/Airport.ttf) format("woff");
   font-weight: normal;
   font-style: normal;
 }
