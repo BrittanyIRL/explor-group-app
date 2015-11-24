@@ -1,11 +1,3 @@
-/*@font-face {
-	font-family: "airport"; src: url('fonts/Airport.ttf')
-}
-
-@font-face {
-	font-family: "roboto"; src: url('fonts/Roboto-Thin.ttf')
-}*/
-
 /*landing page navigation fields */
 .section .landingPageNavigation{
 	/*margin-top: -30px;*/
@@ -27,7 +19,7 @@
 
 #splash-title {
 	font-size: 180px;
-	font-family: "airport";
+	font-family: "Airport";
 	color: white;
 	text-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
@@ -43,7 +35,7 @@
 
 .airport {
 	font-size: 100px;
-	font-family: "roboto";
+	font-family: "Roboto-Thin";
 	color: white;
 	text-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
@@ -67,7 +59,7 @@
   margin: 0;
   width: 50%;
   text-align: center;
-  font-family: "roboto";
+  font-family: "Roboto-Thin";
   color: white !important;
   font-size: 70px;
   appearance: none;
