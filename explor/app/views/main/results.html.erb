@@ -1,5 +1,5 @@
 
-<div id="results">
+<div id="results" class="resultsPage">
 	<div class="section">
 	<!--currently not showing up -->
 	<h2>Weather</h2> 
@@ -29,44 +29,52 @@
 
 	</div>
     
-    <div class="section"> 
+    <div class="section rowParent"> 
 	    <h2>Popular Food and Drink</h2>	
-		<% @google_restaurants.each do |item| %>
-		
-			<!-- this is a loop to filter out the results with info that we want to display -->		
-			<% @filtered_results = [] %>	
+	    <% index = 0 %>	
+		<% @google_restaurants.each do |restaurant| %>
+			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["price_level"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
+
+			<% if index % 4 == 0 %><div class="slide"><% end %>
 			
-			<% if item["photos"] != nil && item["name"] != nil && item["price_level"] != nil && item["rating"] && item["vicinity"] != nil %>			
-				<% @filtered_results.push(item)%>
-			<% end %>
-			
-			<% @filtered_results.first(4).each do |item| %>
-				<!-- <div class="col-sm-6 col-md-4"> -->
-				<img class="resultsImage" src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />	
-				<h3><%= item["name"] %></h3>
-				<p>Price Level: <%= item["price_level"] %></p>
-				<p>Rating: <%= item["rating"] %></p>
-				<p>Address: <%= item["vicinity"] %></p>
-				
-				<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+			<div class="column">
+				<div class="columnImage"> 
+				<img src="<%= @photo_prefix + restaurant["photos"][0]["photo_reference"] + @key %>" />	
+								<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
 		-           <%= f.hidden_field :name, value: @location %>
-		-           <%= f.hidden_field :categories, value: item['types'] %>
-		-           <%= f.hidden_field :title, value: item['name'] %>
-		-           <%= f.hidden_field :price_level, value: item['price_level'] %>
-		-           <%= f.hidden_field :rating, value: item['rating'] %>
-		-           <%= f.hidden_field :vicinity, value: item['vicinity'] %>
-		-           <%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
-		-           <%= f.hidden_field :place_id, value: item['place_id'] %>
-	-               <%= f.primary %>
+		-           <%= f.hidden_field :categories, value: restaurant['types'] %>
+		-           <%= f.hidden_field :title, value: restaurant['name'] %>
+		-           <%= f.hidden_field :price_level, value: restaurant['price_level'] %>
+		-           <%= f.hidden_field :rating, value: restaurant['rating'] %>
+		-           <%= f.hidden_field :vicinity, value: restaurant['vicinity'] %>
+		-           <%= f.hidden_field :img, value: restaurant["photos"][0]["photo_reference"] %>
+		-           <%= f.hidden_field :place_id, value: restaurant['place_id'] %>
+	-               <%= f.submit %>
 	-           <% end %>
-			<% end %> <!-- end filtered_results loop -->
-	<!-- 				</div>
-					
+
+
+
+
+
+
 				</div>
-			</div>end slide -->
+				<h3><%= restaurant["name"] %></h3>
+				<p>Price Level: <%= restaurant["price_level"] %></p>
+				<p>Rating: <%= restaurant["rating"] %></p>
+				<p>Address: <%= restaurant["vicinity"] %></p>
 				
-		<% end %> <!-- end google_restaurants loop -->
-		</div>
+
+			</div>
+
+			<% if index % 4 == 3 %></div><% end %>
+			<% index += 1 %>
+
+			<% end %> <!-- end if -->
+			
+			<% end %> <!-- end google_restaurants loop -->
+			</div>
+				
+		
 	</div>      
 
 
