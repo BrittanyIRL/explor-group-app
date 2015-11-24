@@ -1,4 +1,8 @@
+var cities = ["Seattle", "Beijing", "Paris", "London", "Tokyo"]
+
 $(document).ready(function() {
+    
+
     //full page JS functions for landing and results 
     $('#landing').fullpage({
         //Navigation
@@ -117,4 +121,13 @@ $(document).ready(function() {
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
+
+    //airport jquery
+    $('.airport').airport(cities, {
+        transition_speed: 1000,
+        fill_space: true
+    });
+
+    //blinking cursor
+    $('#autocomplete').focus();
 });

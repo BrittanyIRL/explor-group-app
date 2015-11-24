@@ -8,13 +8,19 @@
 	</div>
 
 <div id="landing">
-    <div class="section">
-    	<h1>Explor</h1>
-		<%= form_for :location, url: results_path, html: { id: "place-search" } do |f|  %>
+    <div class="section first-page">
+    	<div class="splash">
+    		<h1 id="splash-title">Explor</h1>
+ 			</div>
+ 			<div class="animation">
+    		<div class="airport"></div>
+    	</div>
+			<div class="container search-bar">	
+				<%= form_for :location, url: results_path, html: { id: "place-search" } do |f|  %>
           <%= f.text_field :name, id: 'autocomplete' %>
-          <%= f.submit 'Explor' %>
+          <%= f.submit 'Explor', id: 'first-page-submit' %>
         <% end %>
-		
+			</div>
     </div>
     <div class="section">
     	<div class="container">
