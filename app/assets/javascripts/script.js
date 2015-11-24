@@ -124,7 +124,10 @@ $(document).ready(function() {
 
     //airport jquery
     $('.airport').airport(cities, {
-        transition_speed: 50000,
+        transition_speed: 1000,
         fill_space: true
     });
+
+    //blinking cursor
+    $('#autocomplete').focus();
 });

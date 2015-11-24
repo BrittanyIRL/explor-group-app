@@ -24,9 +24,9 @@
 			
 			function testChar(a,b,c,d){
 				if(c >= array.length)
-					setTimeout(function() { testChar(0,0,0,0); }, 1000);				
+					setTimeout(function() { testChar(0,0,0,0); }, 3000);				
 				else if(d >= longest)
-					setTimeout(function() { testChar(0,0,c+1,0); }, 1000);
+					setTimeout(function() { testChar(0,0,c+1,0); }, 3000);
 				else {
 					$(self).find('.c'+a).html((chars[b]==" ")?"&nbsp;":chars[b]);
 					setTimeout(function() {
