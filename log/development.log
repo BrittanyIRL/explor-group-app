@@ -42525,6 +42525,7 @@ ActionController::RoutingError (No route matches [GET] "/..."):
   Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (212.9ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2015-11-23 17:08:58 -0800
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by MainController#index as HTML
@@ -42858,3 +42859,86 @@ Started GET "/assets/yahoo_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-23 17:21:11 -0800
+=======
+Started POST "/results" for ::1 at 2015-11-23 17:12:24 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#results as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/fBC2KiZJwi3c5ZfMktCT/S6au8qdYjRXCPSRYTBmm6EieZ5JnfpWbqQkkg0qCHATvcJ8RbLmiM+mkNWNCwEw==", "location"=>{"name"=>"Seattle, WA, USA"}, "commit"=>"Explor"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+ETHON: Libcurl initialized
+ETHON: started MULTI
+ETHON:         performed EASY effective_url=https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22Seattle,_WA,_USA%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys response_code=200 return_code=ok total_time=0.997062
+ETHON:         performed EASY effective_url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.6,-122.33&radius=5000&types=restaurant|cafe|bar&key=AIzaSyAoyMET6H2ic7Lp_cuTaA4FLUNJ7VlKtp0 response_code=200 return_code=ok total_time=0.593683
+ETHON: performed MULTI
+  Rendered main/results.html.erb within layouts/application (34.7ms)
+  Rendered partials/_flash.html.erb (1.0ms)
+  Rendered sessions/_form.html.erb (16.4ms)
+  Rendered users/_signupform.html.erb (11.5ms)
+Completed 200 OK in 11591ms (Views: 648.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/flickr_test.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/places.self-b6921370aec28bbe36fd2c0506353c59e0b11834196fa2ed9fbe727249240f43.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/linea_styles.self-4e11c31eca8e82a12d9ac32138b2db803983240ca7ebd030c4219f17bfe2f559.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/main.self-b652e365795323e9a271c59dd63fcbea771dff00ca64d6b3422e1942bec34348.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/autocomplete.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 17:12:36 -0800
+
+
+Started GET "/assets/yahoo_test.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/application.self-ecf0a2c1b671db4d698905143a6f0de6bd0ea93fc66949ea85b34cf19e17a05a.css?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/autocomplete.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/flickr_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/jquery.fullPage.min.self-b4a4302b245f65c7f8f751e9dd3887c7c62d9bd05cba8130030534185f1b7fdc.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/places.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/script.self-5b7b9cc97f3559d99ec45bf451bb1e157e7783d21745759f1383de9f700a80fa.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/yahoo_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+>>>>>>> e8d1869886b443213cdf12f0c4b22a24cb6fd920
