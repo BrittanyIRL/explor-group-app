@@ -54,7 +54,6 @@
 		padding: 0;
 		float:left;
 		box-sizing: inherit;
-
 		.columnImage {
 			width: 90%;
     		height: 200px;
@@ -62,19 +61,6 @@
     		overflow: hidden;
     		border-radius: 5px;
 		}
-		.columnImage:hover input {
-			display: inline-block;
-		}
-		.columnImage input {
-		    position:absolute;
-		    display:none;
-		}
-
-		.column input.submit {
-		    top:0;
-		    left:0;
-		}
-
 		h2, p {
 			margin: 0;
 			padding: 0;
@@ -82,6 +68,34 @@
 	}
 }
 
+/* ---- isotope ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
 
 
 
