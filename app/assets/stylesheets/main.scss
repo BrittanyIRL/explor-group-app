@@ -97,6 +97,38 @@
   max-width: 100%;
 }
 
+/* weather */
+h2.location {
+	text-align: left;
+}
+
+.weather-forecast {
+	.current-conditions {
+		width: 30%;
+		display: inline-block;
+		.temp {
+			font-size: 28px;
+		}
+	}
+	.daily-forecast {
+		width: 12%;
+		display: inline-block;
+		text-align: center;
+	}
+	.weather-icon {
+		padding: 5px;
+	}
+	.temp-high {
+		color: red;
+		margin-right: 10px;
+	}
+	.temp-low {
+		color: blue;
+	}
+}
+
+
+
 
 
 
