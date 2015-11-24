@@ -1,13 +1,12 @@
-<%= @current_user %>
-
 <% if @locations.length == 0 %>
-	<div class="container">
-		<h1>Start Searching to </h1>
-		<p>jaljkdfl;ajdflkjaldfsa</p>
+	<div class="emptyUser">
+		<h3>Seems like nothing has been saved. Why not search for some places to visit on your next trip and then save them to come back to later?</h3>
+		
+		<h2><%= link_to 'Start Exploring', '/' %></h2>
 	</div>
 <% end %>
 
-<% if @locations != nil %>
+<% if @locations.length != 0 %>
 <p> kjadakdls;afs</p>
 <div class="container" style="margin-bottom: 150px">
 <!-- location for loop starts -->
