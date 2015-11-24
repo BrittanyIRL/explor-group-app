@@ -11,15 +11,18 @@
 }
 
 .splash {
-	margin: 0% 0% 0% 20%;
+	margin: 0%;
 	display: inline-block;
 	float:left;
-	width: 40%;
+	width: 50%;
+	text-align: right;
 }
 
 #splash-title {
 	font-size: 180px;
-	font-family: "Airport";
+	line-height: 200px;
+	vertical-align: middle;
+	font-family: "Airport", sans-serif;
 	color: white;
 	text-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
@@ -27,15 +30,13 @@
 .animation {
 	text-align: left;
 	display: inline-block;
-/*	padding-left: 2%;
-*/	margin-right: 20%;
+	margin: 0%;
 	padding: 0;
-	
 }
 
 .airport {
 	font-size: 100px;
-	font-family: "Roboto-Thin";
+	font-family: "Roboto-Thin", sans-serif;
 	color: white;
 	text-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
@@ -43,6 +44,7 @@
 .search-bar {
 	width: 100%;
 	text-align: center;
+	clear: both;
 }
 
 .landingPageContainer {
@@ -50,9 +52,13 @@
 	margin: 0;
 }
 .animationContainer {
-	width: 40%;
+	line-height: 250px;
+	vertical-align: middle;
+	width: 50%;
 	float:right;
 	margin: 0;
+	text-align: left;
+	padding-left: 20px;
 }
 
 #autocomplete {
