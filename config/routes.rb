@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
+  delete 'places' => 'places#destroy'
+
   resources :places
 
   get 'flickr_test' => 'flickr_test#index'

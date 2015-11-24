@@ -42606,3 +42606,841 @@ Started GET "/assets/yahoo_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-23 17:12:37 -0800
+
+
+Started GET "/" for ::1 at 2015-11-23 18:10:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered main/index.html.erb within layouts/application (26.8ms)
+  Rendered partials/_flash.html.erb (0.6ms)
+  Rendered sessions/_form.html.erb (87.9ms)
+  Rendered users/_signupform.html.erb (8.6ms)
+Completed 200 OK in 1219ms (Views: 1129.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/main.self-478ad4d3bc7d5e322348ad1f71e334db429efd5476ecc35987ca625328bd6310.css?body=1" for ::1 at 2015-11-23 18:10:51 -0800
+
+
+Started GET "/assets/places.self-1b509476f45cf26aa8ac2ecb936e18aff98a6c436737ff4cd4768f2cd1480717.css?body=1" for ::1 at 2015-11-23 18:10:51 -0800
+
+
+Started GET "/assets/application.self-7a7aa0b356270a7439df72ff20f968c2da4fa64ed6df6ac25cc875f308b06500.css?body=1" for ::1 at 2015-11-23 18:10:51 -0800
+
+
+Started GET "/..." for ::1 at 2015-11-23 18:10:51 -0800
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (162.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (262.5ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 18:31:50 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered main/index.html.erb within layouts/application (28.9ms)
+  Rendered partials/_flash.html.erb (1.1ms)
+  Rendered sessions/_form.html.erb (47.5ms)
+  Rendered users/_signupform.html.erb (9.0ms)
+Completed 200 OK in 910ms (Views: 817.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/..." for ::1 at 2015-11-23 18:31:52 -0800
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (164.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (271.4ms)
+
+
+Started POST "/results" for ::1 at 2015-11-23 18:32:00 -0800
+Processing by MainController#results as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mgXGZ6r3L5C182gjen69GGiJvK/3oR726Pb0UO/fV7s6jRJEtBfYo1q2k1f2TgbHTWLxC15ckbYH5mfmyGZKtw==", "location"=>{"name"=>"New York, NY, United States"}, "commit"=>"Explor"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+ETHON: Libcurl initialized
+ETHON: started MULTI
+ETHON:         performed EASY effective_url=https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22New_York,_NY,_United_States%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys response_code=200 return_code=ok total_time=1.139339
+ETHON:         performed EASY effective_url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.71,-74.01&radius=5000&types=restaurant|cafe|bar&key=AIzaSyAoyMET6H2ic7Lp_cuTaA4FLUNJ7VlKtp0 response_code=200 return_code=ok total_time=1.084004
+ETHON: performed MULTI
+  Rendered main/results.html.erb within layouts/application (27.4ms)
+  Rendered partials/_flash.html.erb (0.2ms)
+  Rendered sessions/_form.html.erb (2.7ms)
+  Rendered users/_signupform.html.erb (2.8ms)
+Completed 200 OK in 12050ms (Views: 263.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/fonts/linea-weather-10.woff" for ::1 at 2015-11-23 18:32:13 -0800
+
+
+Started GET "/results" for ::1 at 2015-11-23 18:32:35 -0800
+Processing by MainController#results as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/main_controller.rb:10:in `results'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.1ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 18:32:37 -0800
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mLocation Load (1.8ms)[0m  SELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1  [["user_id", 5]]
+  [1m[36mFavorite Load (1.0ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1[0m  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (88.7ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 9.9ms)
+
+ActionView::Template::Error (undefined method `favorite_path' for #<#<Class:0x007f8179396cf8>:0x007f8179394ca0>):
+    15: 					<p><%= f.rating %></p>
+    16: 					<% if f.price_level %>
+    17: 					<p><%= f.price_level %></p>
+    18: 					<p><%= link_to 'Delete', f, class: 'btn btn-danger', method: :delete %></p>
+    19: 					<% end %>
+    20: 				</div>
+    21: 				<div class="status">
+  app/views/places/index.html.erb:18:in `block (2 levels) in _app_views_places_index_html_erb___906942705872068409_70097030641620'
+  app/views/places/index.html.erb:8:in `block in _app_views_places_index_html_erb___906942705872068409_70097030641620'
+  app/views/places/index.html.erb:2:in `_app_views_places_index_html_erb___906942705872068409_70097030641620'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (140.2ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 18:37:19 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (1.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (31.0ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (2.2ms)
+  Rendered users/_signupform.html.erb (2.7ms)
+Completed 200 OK in 281ms (Views: 227.5ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/linea_styles.self-4e11c31eca8e82a12d9ac32138b2db803983240ca7ebd030c4219f17bfe2f559.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/flickr_test.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/main.self-478ad4d3bc7d5e322348ad1f71e334db429efd5476ecc35987ca625328bd6310.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/autocomplete.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/places.self-1b509476f45cf26aa8ac2ecb936e18aff98a6c436737ff4cd4768f2cd1480717.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/yahoo_test.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/application.self-7a7aa0b356270a7439df72ff20f968c2da4fa64ed6df6ac25cc875f308b06500.css?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/autocomplete.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/flickr_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/jquery.fullPage.min.self-b4a4302b245f65c7f8f751e9dd3887c7c62d9bd05cba8130030534185f1b7fdc.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/places.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/script.self-5b7b9cc97f3559d99ec45bf451bb1e157e7783d21745759f1383de9f700a80fa.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/yahoo_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-23 18:37:20 -0800
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 18:37:33 -0800
+
+ActionController::RoutingError (No route matches [DELETE] "/places"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.7ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 18:38:50 -0800
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mLocation Load (0.7ms)[0m  SELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1  [["user_id", 5]]
+  [1m[36mFavorite Load (0.5ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1[0m  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (25.5ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (1.4ms)
+  Rendered users/_signupform.html.erb (3.0ms)
+Completed 200 OK in 210ms (Views: 169.0ms | ActiveRecord: 9.7ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 18:38:55 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ExASJo33afDtdEt48Unc0WfJwk4Q7mBjcpklvzbMFEWzmMYFkxeewwIxsAx9eWcOQiKP6rkT7yOdibYJEXUJSQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFavorite Load (0.6ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."place_id" IS NULL LIMIT 1[0m  [["user_id", 5]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/places_controller.rb:27:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (155.3ms)
+
+
+Started GET "/" for ::1 at 2015-11-23 18:48:58 -0800
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered main/index.html.erb within layouts/application (4.2ms)
+  Rendered partials/_flash.html.erb (0.2ms)
+  Rendered sessions/_form.html.erb (2.0ms)
+  Rendered users/_signupform.html.erb (3.9ms)
+Completed 200 OK in 417ms (Views: 369.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/..." for ::1 at 2015-11-23 18:48:59 -0800
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (201.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (12.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (196.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (325.0ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 18:49:04 -0800
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mLocation Load (0.6ms)[0m  SELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1  [["user_id", 5]]
+  [1m[36mFavorite Load (0.4ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1[0m  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (28.8ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered users/_signupform.html.erb (2.1ms)
+Completed 200 OK in 203ms (Views: 168.0ms | ActiveRecord: 7.7ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 18:49:09 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7H2p3qVnLTQvq5gdiTfLaQlzEmcHV9JFoQ9r9fDLEEFM9X39u4faB8DuY2kFB3C2LJhfw66qXQVOH/hD13INTQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFavorite Load (0.5ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."place_id" IS NULL LIMIT 1[0m  [["user_id", 5]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/places_controller.rb:27:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (167.0ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 18:50:22 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (0.5ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (24.5ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered users/_signupform.html.erb (3.2ms)
+Completed 200 OK in 342ms (Views: 299.1ms | ActiveRecord: 10.0ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 18:50:26 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5DSDd0O3K6OIEXtoMsPMFigN7Yu8NfzQuLoEIQnnRclEvFdUXVfckGdUgBy+83fJDeagLxXIc5BXqpeXLl5YxQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFavorite Load (0.4ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."place_id" IS NULL LIMIT 1  [["user_id", 5]]
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.6ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: favorite):
+  app/controllers/places_controller.rb:38:in `place_params'
+  app/controllers/places_controller.rb:27:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (171.1ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 18:56:01 -0800
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mLocation Load (0.6ms)[0m  SELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1  [["user_id", 5]]
+  [1m[36mFavorite Load (0.4ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1[0m  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (34.5ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (2.4ms)
+  Rendered users/_signupform.html.erb (2.3ms)
+Completed 200 OK in 365ms (Views: 314.6ms | ActiveRecord: 10.3ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 18:56:07 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X7sTtIvFrhUZQkyz5bcrRa65SnSmLL9uS5oVIm4OpoX/M8eXlSVZJvYHt8dph5Cai1IH0A/RMC6kioaUSbe7iQ=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFavorite Load (0.3ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."id" = $1 LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Favorite with 'id'=):
+  app/controllers/places_controller.rb:28:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (164.0ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:13:06 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (1.6ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (0.9ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (221.2ms)
+  Rendered partials/_flash.html.erb (0.9ms)
+  Rendered sessions/_form.html.erb (65.7ms)
+  Rendered users/_signupform.html.erb (7.9ms)
+Completed 200 OK in 1187ms (Views: 973.6ms | ActiveRecord: 78.9ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 19:13:14 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f1A7gbO6y25YjZxbsdp54a6eQu0k/duiqipq+4VIUXrf2O+irVo8XbfIZy896sI+i3UPSY0AVOJFOvlNovFMdg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: favorite):
+  app/controllers/places_controller.rb:47:in `destroy_params'
+  app/controllers/places_controller.rb:26:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (94.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (200.8ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:16:57 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (0.4ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (28.9ms)
+  Rendered partials/_flash.html.erb (0.2ms)
+  Rendered sessions/_form.html.erb (1.5ms)
+  Rendered users/_signupform.html.erb (2.0ms)
+Completed 200 OK in 369ms (Views: 326.6ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 19:17:01 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2c7XktjbEcIncyrLEOd6vRmWwF7D6WH5WaQ8RaTJCjZ5RgOxxjvm8cg20b+c18FiPH2N+moU7rm2tK/zg3AXOg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `favorite' for #<User:0x007fa289099e48>):
+  app/controllers/places_controller.rb:27:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.2ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:17:11 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (0.5ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (22.5ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (3.0ms)
+  Rendered users/_signupform.html.erb (2.5ms)
+Completed 200 OK in 184ms (Views: 146.6ms | ActiveRecord: 10.6ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 19:17:15 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kcvTaDO1SwFLPHloDcgQaJuJ4MucM6u7eSiQGkdLFhsxQwdLLVW8MqR5ghyB+Ku3vmKtbzXOJPuWOAOsYPILFw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.6ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: favorite):
+  app/controllers/places_controller.rb:48:in `destroy_params'
+  app/controllers/places_controller.rb:27:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:18:29 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (0.4ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (31.8ms)
+  Rendered partials/_flash.html.erb (0.2ms)
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered users/_signupform.html.erb (3.4ms)
+Completed 200 OK in 300ms (Views: 258.4ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:21:04 -0800
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mLocation Load (0.7ms)[0m  SELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1  [["user_id", 5]]
+  [1m[36mFavorite Load (0.3ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1[0m  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (37.3ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (1.6ms)
+  Rendered users/_signupform.html.erb (2.8ms)
+Completed 200 OK in 343ms (Views: 300.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/flickr_test.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 19:21:04 -0800
+
+
+Started GET "/assets/linea_styles.self-4e11c31eca8e82a12d9ac32138b2db803983240ca7ebd030c4219f17bfe2f559.css?body=1" for ::1 at 2015-11-23 19:21:04 -0800
+
+
+Started GET "/assets/main.self-478ad4d3bc7d5e322348ad1f71e334db429efd5476ecc35987ca625328bd6310.css?body=1" for ::1 at 2015-11-23 19:21:04 -0800
+
+
+Started GET "/assets/places.self-1b509476f45cf26aa8ac2ecb936e18aff98a6c436737ff4cd4768f2cd1480717.css?body=1" for ::1 at 2015-11-23 19:21:04 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 19:21:04 -0800
+
+
+Started GET "/assets/autocomplete.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 19:21:04 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/yahoo_test.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/application.self-7a7aa0b356270a7439df72ff20f968c2da4fa64ed6df6ac25cc875f308b06500.css?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/autocomplete.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/flickr_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/jquery.fullPage.min.self-b4a4302b245f65c7f8f751e9dd3887c7c62d9bd05cba8130030534185f1b7fdc.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/main.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/places.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/script.self-5b7b9cc97f3559d99ec45bf451bb1e157e7783d21745759f1383de9f700a80fa.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/yahoo_test.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-23 19:21:05 -0800
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 19:21:08 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ZBh62LK5S5KTTt/1CoFyyJnqtF+KNZGI7bjXlX09jhVGLXIfCoSHaUIwAtYGr4UB4znddfVWQbMpnDock3rNA=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mFavorite Load (0.6ms)[0m  [1mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."place_id" IS NULL LIMIT 1[0m  [["user_id", 5]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/places_controller.rb:28:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (180.2ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:27:54 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1[0m  [["user_id", 5]]
+  [1m[35mFavorite Load (0.3ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (33.4ms)
+  Rendered partials/_flash.html.erb (0.2ms)
+  Rendered sessions/_form.html.erb (2.3ms)
+  Rendered users/_signupform.html.erb (3.3ms)
+Completed 200 OK in 382ms (Views: 298.9ms | ActiveRecord: 9.2ms)
+
+
+Started DELETE "/places" for ::1 at 2015-11-23 19:27:57 -0800
+Processing by PlacesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rG9YEhWQYncJMxLplCyIcJ8cJbtnCPC5aFB5kedpnZUM54wxC3CVROZ26Z0YHDOvuvdoH871f/mHQOonwNCAmQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mFavorite Load (0.4ms)[0m  SELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."place_id" IS NULL LIMIT 1  [["user_id", 5]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/places_controller.rb:28:in `destroy'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.1ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.1ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:31:10 -0800
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT "locations".* FROM "locations" INNER JOIN "locations_users" ON "locations"."id" = "locations_users"."location_id" WHERE "locations_users"."user_id" = $1  [["user_id", 5]]
+  [1m[36mFavorite Load (0.3ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."location_id" = $1[0m  [["location_id", 2]]
+  Rendered places/index.html.erb within layouts/application (5.3ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (1.2ms)
+  Rendered users/_signupform.html.erb (4.1ms)
+Completed 200 OK in 264ms (Views: 258.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/places" for ::1 at 2015-11-23 19:31:49 -0800
+Processing by PlacesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered places/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/ABHOME/WDI_04/project3/explor-group-app/app/views/places/index.html.erb:18: syntax error, unexpected '<'
+...: 'btn btn-danger', place_id: <%= f.place_id );@output_buffe...
+...                               ^
+/Users/ABHOME/WDI_04/project3/explor-group-app/app/views/places/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;					 end 
+         					    ^
+/Users/ABHOME/WDI_04/project3/explor-group-app/app/views/places/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;		 end 
+         		    ^
+/Users/ABHOME/WDI_04/project3/explor-group-app/app/views/places/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/ABHOME/WDI_04/project3/explor-group-app/app/views/places/index.html.erb:58: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/ABHOME/WDI_04/project3/explor-group-app/app/views/places/index.html.erb:60: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/places/index.html.erb:18: syntax error, unexpected '<'
+  app/views/places/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
+  app/views/places/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+  app/views/places/index.html.erb:36: syntax error, unexpected keyword_end, expecting ')'
+  app/views/places/index.html.erb:58: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/places/index.html.erb:60: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.9ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (82.5ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ABHOME/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (168.8ms)
