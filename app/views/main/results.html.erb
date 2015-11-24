@@ -1,34 +1,34 @@
+<% weather_codes = ['weather-windgust','weather-tempest','weather-tempest','weather-tempest','weather-storm-32','weather-hail','weather-hail','weather-hail','weather-mistyrain','weather-mistyrain','weather-hail','weather-rain','weather-rain','weather-snow','weather-cloud-snowflake','weather-snow','weather-snow','weather-hail','weather-hail','weather-fog','weather-fog','weather-fog','weather-fog','weather-windgust','weather-wind', 'weather-snowflake','weather-cloud','weather-variable-halfmoon','weather-variable-sun','weather-variable-halfmoon','weather-variable-sun','weather-fullmoon','weather-sun','weather-moon','weather-sun','weather-hail','weather-sun','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-drop','weather-snowflake','weather-cloud-snowflake','weather-snowflake','weather-variable-fullmoon','weather-storm-32','weather-snow','weather-cloud-lightning',''
+] %>
 
 <div id="results" class="resultsPage">
 	<div class="section">
 	<!--currently not showing up -->
-	<h2>Weather</h2> 
+	<h2 class="location"><%= @location %></h2> 
+	<!-- weather forecast -->
+		<div class="weather-forecast">
+			<div class="current-conditions">
+				<%= @weather['condition']['date'] %><br>
+				<% current_code = @weather['condition']['code'].to_i %><br>
+				<span class="icon icon-<%= weather_codes[current_code] %>"></span><br>
+				<span class="temp"><%= @weather['condition']['temp'] %></span><br>
+				<%= @weather['condition']['text'] %><br>
+			</div>
 
-	<% weather_codes = ['weather-windgust','weather-tempest','weather-tempest','weather-tempest','weather-storm-32','weather-hail','weather-hail','weather-hail','weather-mistyrain','weather-mistyrain','weather-hail','weather-rain','weather-rain','weather-snow','weather-cloud-snowflake','weather-snow','weather-snow','weather-hail','weather-hail','weather-fog','weather-fog','weather-fog','weather-fog','weather-windgust','weather-wind', 'weather-snowflake','weather-cloud','weather-variable-halfmoon','weather-variable-sun','weather-variable-halfmoon','weather-variable-sun','weather-fullmoon','weather-sun','weather-moon','weather-sun','weather-hail','weather-sun','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-drop','weather-snowflake','weather-cloud-snowflake','weather-snowflake','weather-variable-fullmoon','weather-storm-32','weather-snow','weather-cloud-lightning',''
-	] %>
+			<% @weather['forecast'].each do |day| %>
+			<div class="daily-forecast">
+				<span class="badge"><%= day['day'] %></span><br>
+				<% code = day['code'].to_i %>
+				<span class="icon icon-<%= weather_codes[code] %>"></span><br>
+				<%= day['text'] %><br>
+				<span class="temp-high"><%= day['high'] %></span><span class="temp-low"><%= day['low'] %></span>				
+			</div>
+			<% end %>
+			
 
-
-	<%= @weather['title'] %><br>
-	<%= @weather['lat'] %><br>
-	<%= @weather['long'] %><br>
-	<%= @weather['condition']['code'] %><br>
-	<%= @weather['condition']['date'] %><br>
-	<%= @weather['condition']['temp'] %><br>
-	<%= @weather['condition']['text'] %><br>
-
-	<% @weather['forecast'].each do |day| %>
-	<br><br><br><br><br>
-	<% code = day['code'].to_i %>
-	<div class="icon icon-<%= weather_codes[code] %>"></div><br>
-	<%= day['date'] %><br>
-	<%= day['day'] %><br>
-	<%= day['high'] %><br>
-	<%= day['low'] %><br>
-	<%= day['text'] %><br>
-	<% end %>
-
+		</div>
 	</div>
-    
+    <!-- end weather -->
     <div class="section rowParent"> 
 	    <h2>Popular Food and Drink</h2>	
 	    <% index = 0 %>	

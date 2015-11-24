@@ -1,8 +1,20 @@
 <div class="container" style="margin-bottom: 150px">
+<!-- location for loop starts -->
 <% @locations.each do |l| %>
 	<div class="location">
-	  <!-- location for loop starts -->
-	  <h2 class="placesTitle"><%= l.name %></h2>
+	
+	  <div class="placesTitle">
+	  <div class="location-favorites">
+	  	<span class="badge"><%= l.favorites.count %> Favorites</span>
+	  </div>
+	  <div class="location-delete">
+	  	<span class="badge">Delete</span>
+	  </div>
+		  <h2>
+		  <%= l.name %>
+		  </h2>
+	  </div>
+
 	   <div class="row">
 	   <!-- favorites loop -->
 	    <% l.favorites.each do |f| %>
