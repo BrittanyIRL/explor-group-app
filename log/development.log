@@ -49505,3 +49505,76 @@ Completed 200 OK in 8310ms (Views: 148.8ms | ActiveRecord: 0.3ms)
 
 
 Started GET "/assets/fonts/linea-weather-10.woff" for ::1 at 2015-11-24 08:46:49 -0800
+
+
+Started GET "/" for ::1 at 2015-11-24 09:06:55 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered main/index.html.erb within layouts/application (9.2ms)
+  Rendered partials/_flash.html.erb (0.5ms)
+  Rendered sessions/_form.html.erb (15.9ms)
+  Rendered users/_signupform.html.erb (4.6ms)
+Completed 200 OK in 435ms (Views: 390.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/..." for ::1 at 2015-11-24 09:06:56 -0800
+
+ActionController::RoutingError (No route matches [GET] "/..."):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.9ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (107.2ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brittanybrassell/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.3ms)
+
+
+Started POST "/results" for ::1 at 2015-11-24 09:07:09 -0800
+Processing by MainController#results as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z2b6QF1YK1nvPnkCVRDRXNQyG5xpB4OXARZDFxn9cZr2gxzS22OQYKsJ9RIJC1zS6tsuEBH1e9zInKVTVz7H4A==", "location"=>{"name"=>"Seattle, WA, USA"}, "commit"=>"Explor"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+ETHON: Libcurl initialized
+ETHON: started MULTI
+ETHON:         performed EASY effective_url=https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22Seattle,_WA,_USA%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys response_code=200 return_code=ok total_time=1.229901
+ETHON:         performed EASY effective_url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.6,-122.33&radius=5000&types=art_gallery|museum&key=AIzaSyAoyMET6H2ic7Lp_cuTaA4FLUNJ7VlKtp0 response_code=200 return_code=ok total_time=0.958422
+ETHON:         performed EASY effective_url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.6,-122.33&radius=5000&types=night_club&key=AIzaSyAoyMET6H2ic7Lp_cuTaA4FLUNJ7VlKtp0 response_code=200 return_code=ok total_time=0.971295
+ETHON:         performed EASY effective_url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.6,-122.33&radius=5000&types=restaurant|cafe|bar&key=AIzaSyAoyMET6H2ic7Lp_cuTaA4FLUNJ7VlKtp0 response_code=200 return_code=ok total_time=1.025515
+ETHON: performed MULTI
+  Rendered main/results.html.erb within layouts/application (33.5ms)
+  Rendered partials/_flash.html.erb (0.1ms)
+  Rendered sessions/_form.html.erb (1.5ms)
+  Rendered users/_signupform.html.erb (2.0ms)
+Completed 200 OK in 9065ms (Views: 164.3ms | ActiveRecord: 0.6ms)
