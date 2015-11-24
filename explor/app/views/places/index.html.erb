@@ -8,7 +8,7 @@
 	    <% l.favorites.each do |f| %>
 			<div class="col-sm-6 col-sm-4">
 				<div class="infoBox">
-					<img src="#" />
+					<img src="<%= @photo_prefix + f.img + @key %>" />
 					<h3><%= f.title %></h3>
 					<p><%= f.categories %></p>
 					<address><%= f.vicinity %></address>
@@ -17,8 +17,16 @@
 					<p><%= f.price_level %></p>
 					<% end %>
 				</div>
-				<div class="checkBox">
-				 	<p>Been there, done that.</p>
+				<div class="status">
+					<%= bootstrap_form_for :favorite do |favorite| %>
+						<% if f.status == true %>
+						<%= label_tag(:status, "Been there, done that!") %>
+						<%= check_box_tag :status, f.status, true, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
+						<% else %>
+						<%= label_tag(:status, "Gotta see it!") %>
+						<%= check_box_tag :status, f.status, false, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
+						<% end %>
+				 	<% end %>
 				</div>
 			</div>
 		<% end %>
@@ -30,6 +38,10 @@
 
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script>
+
+  	$('.status-box').on('click', function(){
+  		$
+  	});
 
     $(function() {
     $(".location").show().accordion({
