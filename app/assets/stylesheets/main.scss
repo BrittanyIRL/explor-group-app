@@ -7,6 +7,44 @@
 	/*position: absolute;*/
 }
 
+.first-page {
+	background: image-url('greece.jpeg');
+	background-size: cover;
+}
+
+.splash {
+	margin-left: 25%;
+	display: inline-block;
+}
+
+#splash-title {
+	font-size: 100px;
+	color: white;
+	text-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.animation {
+	text-align: center;
+	display: inline-block;
+	padding-left: 2%;
+	margin-right: 20%;
+	// border: 1px solid black;
+}
+
+.airport {
+	font-size: 90px;
+	color: white;
+	text-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.search-bar {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	border: 1px solid black;
+}
+
+
 /*results page */
 
 
