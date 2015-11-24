@@ -3,6 +3,8 @@ class PlacesController < ApplicationController
   
   def index
     @locations = @current_user.locations.all
+    @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
+    @key = "&key=" + ENV['GOOGLE_PLACES_KEY']
   end
 
   def create
@@ -10,7 +12,7 @@ class PlacesController < ApplicationController
   	@location = Location.find_by location_params
   	puts @location
   	@current_user.favorites << @location.favorites.create(place_params) # works
-  	
+
   end
 
   def destroy
