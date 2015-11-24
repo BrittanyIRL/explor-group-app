@@ -19,8 +19,10 @@
 }
 
 .splash {
-	margin: -5% 0% 0% 20%;
+	margin: 0% 0% 0% 20%;
 	display: inline-block;
+	float:left;
+	width: 40%;
 }
 
 #splash-title {
@@ -31,11 +33,12 @@
 }
 
 .animation {
-	text-align: center;
+	text-align: left;
 	display: inline-block;
-	padding-left: 2%;
-	margin-right: 20%;
-	// border: 1px solid black;
+/*	padding-left: 2%;
+*/	margin-right: 20%;
+	padding: 0;
+	
 }
 
 .airport {
@@ -48,6 +51,16 @@
 .search-bar {
 	width: 100%;
 	text-align: center;
+}
+
+.landingPageContainer {
+	width: 100%;
+	margin: 0;
+}
+.animationContainer {
+	width: 40%;
+	float:right;
+	margin: 0;
 }
 
 #autocomplete {

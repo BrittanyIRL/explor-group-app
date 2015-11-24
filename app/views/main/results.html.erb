@@ -60,46 +60,46 @@
 			<% end %> <!-- end if -->
 		<% end %> <!-- end google_restaurants loop -->
 	</div> <!--end section -->
-
-    <div class="section rowParent"> 
-	    <h2>Arts</h2>	
-	    <% index = 0 %>	
-		<% @google_art.each do |art| %>
-			<% if art["photos"] != nil && art["name"] != nil && art["price_level"] != nil && art["rating"] && art["vicinity"] != nil %>	
-
-			<% if index % 4 == 0 %><div class="slide"><% end %>			
+	</div>
+    <div class="section rowParent">
+    <h2>Arts</h2>
+    <% art_index = 0 %>	
+		<% @google_art.each do |item| %>
+			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
+			<% if art_index % 4 == 0 %><div class="slide"><% end %>			
 			<div class="column">
 				<div class="columnImage"> 
-					<img src="<%= @photo_prefix + art["photos"][0]["photo_reference"] + @key %>" />	
+					<img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>" />
+				</div>	
+				<h1><%= item["name"] %></h1>
+					<p>Rating: <%= item["rating"] %></p>
+					<p>Address: <%= item["vicinity"] %></p>
+					<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+-                        <%= f.hidden_field :name, value: @location %>
+-                        <%= f.hidden_field :categories, value: item['types'] %>
+-                        <%= f.hidden_field :title, value: item['name'] %>
+-                        <%= f.hidden_field :price_level, value: item['price_level'] %>
+-                        <%= f.hidden_field :rating, value: item['rating'] %>
+-                        <%= f.hidden_field :vicinity, value: item['vicinity'] %>
+-                        <%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
+-                        <%= f.hidden_field :place_id, value: item['place_id'] %>
+						<%= f.submit %>
+-                    <% end %>
 				</div>
-				<h3><%= art["name"] %></h3>
-				<p>Price Level: <%= art["price_level"] %></p>
-				<p>Rating: <%= art["rating"] %></p>
-				<p>Address: <%= art["vicinity"] %></p>
-				<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
-		         <%= f.hidden_field :name, value: @location %>
-		          <%= f.hidden_field :categories, value: art['types'] %>
-		         <%= f.hidden_field :title, value: art['name'] %>
-		         <%= f.hidden_field :price_level, value: art['price_level'] %>
-		          <%= f.hidden_field :rating, value: art['rating'] %>
-		          <%= f.hidden_field :vicinity, value: art['vicinity'] %>
-		          <%= f.hidden_field :img, value: art["photos"][0]["photo_reference"] %>
-		           <%= f.hidden_field :place_id, value: art['place_id'] %>
-	              <%= f.submit %>
-	          <% end %>
-			</div>
-			<% if index % 4 == 3 %></div><% end %>
-			<% index += 1 %>
+			<% if art_index % 4 == 3 %></div><% end %>
+			<% art_index += 1 %>
 			<% end %> <!-- end if -->
-		<% end %> <!-- end google_art loop -->
-	</div> <!--end section -->	
+		<% end %> <!-- end google_restaurants loop -->
+	</div> <!--end section -->
+	</div>
+
     <div class="section rowParent"> 
 	    <h2>Nightlife</h2>	
-	    <% index = 0 %>	
+	    <% nightlife_index = 0 %>	
 		<% @google_clubs.each do |club| %>
 			<% if club["photos"] != nil && club["name"] != nil && club["price_level"] != nil && club["rating"] && club["vicinity"] != nil %>	
 
-			<% if index % 4 == 0 %><div class="slide"><% end %>			
+			<% if nightlife_index % 4 == 0 %><div class="slide"><% end %>			
 			<div class="column">
 				<div class="columnImage"> 
 					<img src="<%= @photo_prefix + club["photos"][0]["photo_reference"] + @key %>" />	
@@ -120,41 +120,14 @@
 	              <%= f.submit %>
 	          <% end %>
 			</div>
-			<% if index % 4 == 3 %></div><% end %>
-			<% index += 1 %>
+			<% if nightlife_index % 4 == 3 %></div><% end %>
+			<% nightlife_index += 1 %>
 			<% end %> <!-- end if -->
 		<% end %> <!-- end google_art loop -->
 	</div> <!--end section -->	
-
-
-
-
-
-    <div class="section">
-		<div class="grid">
-  			<% @f_grid.each do |photo| %>
-  			<div class="grid-sizer"></div>
-  			
-	  			<div class="grid-item">
-	   				<img src="<%= photo %>"/>
-	  			</div>
-	  		<% end %>
-		</div>
-	</div>	
 </div> 
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
-	<script>
-	  // init Masonry after all images have loaded
-	  var $grid = $('.grid').imagesLoaded( function() {
-	    $grid.masonry({
-	      itemSelector: '.grid-item',
-	      percentPosition: true,
-	      columnWidth: '.grid-sizer'
-	    }); 
-	  });
-	</script>
      
 
 
