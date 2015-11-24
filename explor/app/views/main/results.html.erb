@@ -35,8 +35,7 @@
 		<% @google_restaurants.each do |restaurant| %>
 			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["price_level"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
 
-			<% if index % 4 == 0 %><div class="slide"><% end %>
-			
+			<% if index % 4 == 0 %><div class="slide"><% end %>			
 			<div class="column">
 				<div class="columnImage"> 
 				<img src="<%= @photo_prefix + restaurant["photos"][0]["photo_reference"] + @key %>" />	
