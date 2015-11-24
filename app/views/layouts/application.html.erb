@@ -28,7 +28,9 @@
 		    <% if @current_user %>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <div class="icon icon-basic-gear"></div>
+           <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li><a href="/places">My Places</a></li>
             <li role="separator" class="divider"></li>
@@ -86,10 +88,9 @@
 <footer>
   <h1><%= link_to 'Explor', '/#explor', class: ''%></h1>
   <ul>
-    <li>icon</li>
-    <li>icon</li>
-    <li>icon</li>
-    <li>copyright 2015</li>
+    <li>
+      <small>Copyright  &copy; 2015 A. Bautista, B. Brassel & J. Sakalys</small>
+      </li>
   </ul>
 </footer>
 </body>

@@ -223,7 +223,27 @@ h2.location {
 	}
 }
 
+.dropdown-menu {
+	border-radius: 0px;
+	background-color: rgba(10,10,10,.2);
+	border: 0px;
+	color: white;
+	box-shadow: none;
+}
 
+.dropdown-menu>li>a {
+	color: white;
+}
+
+.dropdown-menu>li>a:hover {
+	color: gray;
+	background-color: none;
+}
+
+footer ul li {
+	color: white;
+	line-height: 6em;
+}
 
 
 
