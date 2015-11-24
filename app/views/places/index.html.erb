@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="margin-bottom: 150px">
 <% @locations.each do |l| %>
 	<div class="location">
 	  <!-- location for loop starts -->
@@ -18,7 +18,7 @@
 					<% end %>
 				</div>
 				<div class="status">
-					<%= bootstrap_form_for :favorite do |favorite| %>
+<!-- 					<%= bootstrap_form_for :favorite do |favorite| %>
 						<% if f.status == true %>
 						<%= label_tag(:status, "Been there, done that!") %>
 						<%= check_box_tag :status, f.status, true, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
@@ -26,7 +26,7 @@
 						<%= label_tag(:status, "Gotta see it!") %>
 						<%= check_box_tag :status, f.status, false, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
 						<% end %>
-				 	<% end %>
+				 	<% end %> -->
 				</div>
 			</div>
 		<% end %>
@@ -40,7 +40,15 @@
   <script>
 
   	$('.status-box').on('click', function(){
-  		$
+  		console.log('clicked!')
+  		data = $('this').val();
+  		url = "/favorites/" + ""
+  		$.ajax({
+		    url: url,
+		    method: "POST",
+		    data: d,
+		    success: function(resp){ }
+		});
   	});
 
     $(function() {
