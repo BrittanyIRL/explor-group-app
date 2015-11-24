@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "linea-weather-10";
-  src:url("fonts/linea-weather-10.eot");
-  src:url("fonts/linea-weather-10.eot?#iefix") format("embedded-opentype"),
-    url("fonts/linea-weather-10.woff") format("woff"),
-    url("fonts/linea-weather-10.ttf") format("truetype"),
-    url("fonts/linea-weather-10.svg#linea-weather-10") format("svg");
+  src: url("/assets/linea-weather-10.eot");
+  src:url("/assets/linea-weather-10.eot?#iefix") format("embedded-opentype"),
+    url("/assets/linea-weather-10.woff") format("woff"),
+    url("/assets/linea-weather-10.ttf") format("truetype"),
+    url("/assets/linea-weather-10.svg#linea-weather-10") format("svg");
   font-weight: normal;
   font-style: normal;
 
