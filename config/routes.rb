@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ get '*path' => redirect('/')
   # get 'users/new'
 
   # get 'users/create'
