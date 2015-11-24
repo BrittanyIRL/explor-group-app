@@ -89,7 +89,7 @@
 	color: white;
 	opacity: 1;
 	background-color: transparent;
-	font-family: sans-serif;
+	font-family: 'Roboto-Thin';
 	font-size: 24px;
 	display: inline-block;
 	padding: 2px 50px;
@@ -132,7 +132,6 @@
 /*result slider stylin */
 .resultsPage {
 	width: 100%;
-	padding: 1em 2em;
 	h2 {
 		text-align: center;
 		font-size: 4em;
@@ -194,6 +193,9 @@
 /* weather */
 h2.location {
 	text-align: left;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 2px;
 }
 
 .weather-forecast {
@@ -234,13 +236,18 @@ h2.location {
 }
 
 .dropdown-menu>li>a:hover {
-	color: gray;
-	background-color: none;
+	color: #FEB41C;
+	background-color: transparent;
 }
 
 footer ul li {
 	color: white;
 	line-height: 6em;
+}
+
+.linea-icon {
+	font-family: 'linea-basic-10';
+	font-size: 20px;
 }
 
 

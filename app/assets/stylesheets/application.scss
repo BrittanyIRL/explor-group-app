@@ -68,7 +68,7 @@ nav {
 }
 
 footer {
-	background-color: rgba(10,10,10,.2); /* rgba(77, 175, 124, 0.5); ocean green*/
+	background-color: rgba(10,10,10,.5); /* rgba(77, 175, 124, 0.5); ocean green*/
 	color: gray;
 	margin: .25em 0 0 0;
 	padding: .5em 0;
@@ -92,7 +92,8 @@ footer {
 		li {
 			display: inline;
 			float: right;
-			margin-right: .5em;
+			margin-right: 2em;
+			color: lightGray;
 			a {
 				text-decoration: none;
 				margin: .2em auto 1em 2em;
@@ -128,14 +129,18 @@ a, a:link {
 }
 
 a:hover {
-	color: #00B16A;
+	color: #FEB41C;
 	text-decoration: none;
 }
 
 a:active {
-	color: #00B16A;
+	color: #FEB41C;
 	text-decoration: none;
 }
+
+.section {
+padding: 20px;
+	}
 
 
 
