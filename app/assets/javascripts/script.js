@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
     //full page JS functions for landing and results 
     $('#landing').fullpage({
@@ -15,7 +17,7 @@ $(document).ready(function() {
         //Scrolling
         css3: true,
         scrollingSpeed: 700,
-        autoScrolling: true,
+        autoScrolling: false,
         fitToSection: true,
         fitToSectionDelay: 1000,
         scrollBar: true,
@@ -63,10 +65,10 @@ $(document).ready(function() {
         //Navigation
         //menu: '#resultsMenu',
         lockAnchors: false,
-        anchors:['main', 'dining', 'arts', 'nightlife'],
+        anchors:['main', 'dining', 'grid', 'arts', 'nightlife', "grid"],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Weather', "Popular Food and Drink", "Arts", "Nightlife"],
+        navigationTooltips: ['Weather', "Popular Food and Drink", "Arts", "Nightlife", "Grid"],
         showActiveTooltip: true,
         slidesNavigation: true,
         slidesNavPosition: 'top',
@@ -85,7 +87,7 @@ $(document).ready(function() {
         loopHorizontal: true,
         continuousVertical: false,
         normalScrollElements: '',
-        scrollOverflow: true,
+        scrollOverflow: false,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
 
@@ -99,9 +101,9 @@ $(document).ready(function() {
         verticalCentered: true,
         resize : false,
         sectionsColor : ['#fff', '#fff'],
-        paddingTop: '10px',
-        paddingBottom: '10px',
-        fixedElements: '#header, .footer, nav',
+        paddingTop: '20px',
+        paddingBottom: '20px',
+        fixedElements: 'footer, nav',
         responsiveWidth: 0,
         responsiveHeight: 0,
 
