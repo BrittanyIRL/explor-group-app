@@ -24,12 +24,14 @@
 					h2 {
 						margin: 0px;
 						cursor: pointer;
-						font: 300% "Raleway", sans-serif;
+						font: 300% "Roboto-Thin", sans-serif;
 						text-transform: uppercase;
 						line-height: 20vh;
 							.badge {
-								font-family: "Merriweather", sans-serif;
+								font-family: "Roboto", sans-serif;
 								font-size: 12px;
+								letter-spacing: 2px;
+								font-weight: 300;
 							}
 					}
 			}
