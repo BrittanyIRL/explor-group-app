@@ -14,12 +14,7 @@
 
 @font-face {
   font-family: 'airport';
-  src: url(/assets/stylesheets/fonts/Airport.ttf);
-  src: url(/assets/stylesheets/fonts/Airport.ttf) format("embedded-opentype"), 
-    url(/assets/fonts/stylesheets/Airport.ttf) format("truetype"), 
-    url(/assets/fonts/stylesheets/Airport.ttf) format("woff");
-  font-weight: normal;
-  font-style: normal;
+  src: font-url('Airport.ttf');
 }
 
 /*declaring variables for SASS*/
