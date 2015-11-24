@@ -7,6 +7,11 @@
 $font-stack-body: 'Raleway', sans-serif;
 $font-stack-header: 'Merriweather', serif;
 
+@font-face {
+	font-family: "Airport"; src: font-url('Airport.otf');
+	font-family: "Roboto-Thin"; src: font-url('Roboto-Thin.ttf');
+}
+
 /*GLOBAL STYLES */
 
 .no-js #loader { display: none;  }
