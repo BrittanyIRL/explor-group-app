@@ -1,5 +1,11 @@
 <%= bootstrap_form_for :user, url: login_path do |f| %>
-	<%= f.text_field :email, placeholder: "Enter your email" %>
-	<%= f.password_field :password, placeholder: "Enter your password" %>
+	<div class="form-group has-feedback">
+		<%= f.text_field :email, autofocus:true %>
+		<span class="linea-icon form-control-feedback">&</span>
+	</div>
+	<div class="form-group has-feedback">
+		<%= f.password_field :password %>
+		<span class="linea-icon form-control-feedback">3</span>
+	</div>
 	<%= f.submit "Login" %>
 <% end %>

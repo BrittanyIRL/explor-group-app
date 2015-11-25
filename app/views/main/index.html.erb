@@ -19,7 +19,7 @@
 	    		</div>
 	    	</div> <!--animationContainer end -->
 			<div class="container search-bar">	
-				<%= form_for :location, url: results_path, html: { id: "place-search" } do |f|  %>
+				<%= form_for :location, url: results_path, html: { id: "place-search", autofocus: true } do |f|  %>
           <%= f.text_field :name, id: 'autocomplete', placeholder: '' %>
           <%= f.submit 'Explor', id: 'first-page-submit' %>
         <% end %>
