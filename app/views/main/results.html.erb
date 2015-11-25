@@ -30,7 +30,7 @@
 	    <h2>Food & Drink</h2>
 	    <% index = 0 %>	
 		<% @google_restaurants.each do |restaurant| %>
-			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["price_level"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
+			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
 			<% if index % 4 == 0 %><div class="slide"><% end %>
 			<div class="column"><!-- column begin -->
 				<div class="card" data-background="color" data-color="black"><!-- card begin -->             
@@ -40,10 +40,14 @@
 		               	</div>
 		                <div class="social-line" data-buttons="3">
 		                    <button class="btn btn-social">
-		                    <% price = restaurant["price_level"] %>
-		                    <% for i in 1..price %>
-		                    	$
-		                    <% end %>
+			                 <% if restaurant["price_level"] %>
+			                    <% price = restaurant["price_level"] %>
+				                    <% for i in 1..price %>
+				                    	$
+				                    <% end %>
+			                <% else %>
+			                	N/A
+			                <% end %>
 		                    </button>
 		                    <button class="btn btn-social">
 							<% rating = restaurant["rating"] %>
