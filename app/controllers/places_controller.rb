@@ -24,11 +24,17 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-    
-    favorite = @current_user.favorites.find_by_place_id(params[:place_id])
+    favorite = @current_user.favorites.find(params[:id])
     favorite.destroy
     redirect_to places_path
   end
+
+  # def loc_destroy 
+
+  #   location = @current_user.locations.find(params[:id])
+  #   location.destroy
+  #   redirect_to places_path
+  # end
 
   private
 

@@ -17,15 +17,20 @@
 		  	<div class="location-favorites">
 		  		<span class="badge"><%= l.favorites.count %> Favorites</span>
 		  	</div>
-			<div class="location-delete">
-				<span class="badge">Delete</span>
-			</div>
+
 			<h2>
 			  <%= l.name %>
 			</h2>
 	  	</div>
 
 	   	<div class="row">
+		   	<!--<div class="location-delete">
+					<span>
+					< bootstrap_form_for :location, url: "/locations/#{l.id}", method: :delete do |l| >
+					    < l.submit 'Delete' >
+					< end >
+					</span>
+				</div> -->
 		    <% l.favorites.each do |f| %>
 		    <div class="col-xs-3"><!-- column start -->
 				<div class="card" data-background="color" data-color="black"><!-- card begin -->        
@@ -47,7 +52,7 @@
 		                    	<i class="pe-7s-star"></i>
 		                   	<% end %>
 		                    </button>
-			        		<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+			        		<%= bootstrap_form_for :favorite, url: "/places/#{f.id}", html: { id: 'addPlace'}, method: :delete do |f| %>
 				              <%= f.submit 'Delete', class: 'btn btn-social'%>
 				          <% end %>
 	                	</div>
