@@ -7,16 +7,6 @@
 	font-family: "airport"; src: url('fonts/Airport.ttf')
 }*/
 
-@font-face {
-	font-family: "roboto"; 
-	src: url('Roboto-Thin.ttf')
-}
-
-@font-face {
-  font-family: 'airport';
-  src: url('Airport.otf');
-}
-
 /*declaring variables for SASS*/
 $font-stack-body: 'Raleway', sans-serif;
 $font-stack-header: 'Merriweather', serif;
