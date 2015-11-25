@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- get '*path' => redirect('/')
+ # get '*path' => redirect('/')
   # get 'users/new'
 
   # get 'users/create'
@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
 
+  get 'places' => 'places#index'
   delete 'places' => 'places#destroy'
 
   resources :places
