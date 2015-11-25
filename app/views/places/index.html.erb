@@ -12,6 +12,7 @@
 
 
 <% @locations.each do |l| %>
+<% if l.favorites[0] %> <!-- only show locations if they have favorites associated with them -->
 	<div class="location">
 	  	<div class="placesTitle">
 		  	<div class="location-favorites">
@@ -67,8 +68,8 @@
 			<% end %> <!-- end favorites loop -->
 		</div><!-- row end -->
 	</div><!-- end location -->
-	<% end %><!-- end locations loop -->
-
+	<% end %><!-- end if loop -->
+<% end %><!-- end locations loop -->
 
 </div><!-- end container-->
 
