@@ -1,28 +1,28 @@
 <!-- each 'section' is a fullpage for fullpage.js, the container for fullpage is #landing -->
-	<div class="landingPageNavigation">
-		<ul>
-	        <li><a href="#explor">Start Exploring</a></li>	
-		    <li><a href="#about">About Explor</a></li>
-	        <li><a href="#developers">The Team</a></li>
-	    </ul>
-	</div>
+<div class="landingPageNavigation">
+	<ul>
+        <li><a href="#explor">Start Exploring</a></li>	
+	    <li><a href="#about">About Explor</a></li>
+        <li><a href="#developers">The Team</a></li>
+    </ul>
+</div>
 
 <div id="landing">
     <div class="section first-page">
-    <div class="landingPageContainer"> <!--container for all landing text -->
-    	<div class="splash">
-    		<h1 id="splash-title">Explor</h1>
+    	<div class="landingPageContainer"><!--container for all landing text -->
+    		<div class="splash">
+    			<h1 id="splash-title">Explor</h1>
  			</div>
  			<div class="animationContainer">
 	 			<div class="animation">
 	    			<div class="airport"></div>
 	    		</div>
-	    	</div> <!--animationContainer end -->
+	    	</div><!--animationContainer end -->
 			<div class="container search-bar">	
 				<%= form_for :location, url: results_path, html: { id: "place-search", autofocus: true } do |f|  %>
-          <%= f.text_field :name, id: 'autocomplete', placeholder: '' %>
-          <%= f.submit 'Explor', id: 'first-page-submit' %>
-        <% end %>
+          			<%= f.text_field :name, id: 'autocomplete', placeholder: '' %>
+          			<%= f.submit 'Explor', id: 'first-page-submit' %>
+        		<% end %>
 			</div>
 		</div><!--end landingPageContainer -->
     </div>
@@ -31,69 +31,69 @@
 	 		<div class="slide">   	
 	    	 	<div class="row">
 	    	 		<div class="col-sm-8 col-sm-offset-2">
-	    	 		<h2>About this app</h2>
-		    			<p>Fuel your wanderlust with just one click. Channeling the search results for everything from popular landmarks, good eats, weather, and beautiful pictures so that you can spend more time adventuring, and less time researching. 
-		    			</p>
-		    		</div>
+		    	 		<div class="app-icon text-center">S</div>
+		    	 		<h2>About The App</h2>
+			    			<p>Fuel your wanderlust with just one click. Channeling the search results for everything from popular landmarks, good eats, weather, and beautiful pictures so that you can spend more time adventuring, and less time researching. 
+			    			</p>
+			    		</div>
 		    	</div>
 	    	</div>
     	</div>
     </div>
     <div class="section">
-    <div class="container">
-	    <div class="row about-creators">
-	    	<h4>This app was created as a full-stack project for General Assembly, Seattle web development immersive</h4>
-	    	<div class="col-sm-4">
-			    <div class="thumbnail center-block">
-			    <%= image_tag("julie-photo.jpeg", :alt => "Julie Sakalys") %>
-			      <div class="caption">
-			        <h3>Julie Sakalys</h3>
-			      </div>
-			    </div>
-			</div>
-			<div class="col-sm-4">
-			    <div class="thumbnail center-block">
-			      <%= image_tag("ab.jpeg", :alt => "Auggie Bautista") %>
-			      <div class="caption">
-			        <h3>Auggie Bautista</h3>
-			      </div>
-			    </div>
-			</div>
-			<div class="col-sm-4">
-			    <div class="thumbnail center-block">
-			    <%= image_tag("brittany.jpeg", :alt => "Brittany Brassell") %>
-			      <div class="caption">
-			        <h3>Brittany Brassell</h3>
-			      </div>
-			    </div>
+	    <div class="container">
+		    <div class="row about-creators">
+		    	<div class="col-sm-8 col-sm-offset-2">
+			    	<h2>About The Team</h2>
+			    	<p>Explor was created as a full-stack project for General Assembly, Seattle - Web Development Immersive by:</p>
+					<div class="row">
+				    	<div class="col-sm-4">
+						    <div class="thumbnail center-block">
+						    <%= image_tag("julie-photo.jpeg", :alt => "Julie Sakalys") %>
+						      <div class="caption">
+						        <h2>Julie<br>Sakalys</h2>
+						      </div>
+						    </div>
+						</div>
+						<div class="col-sm-4">
+						    <div class="thumbnail center-block">
+						      <%= image_tag("ab.jpeg", :alt => "Auggie Bautista") %>
+						      <div class="caption">
+						        <h2>Auggie<br>Bautista</h2>
+						      </div>
+						    </div>
+						</div>
+						<div class="col-sm-4">
+						    <div class="thumbnail center-block">
+						    <%= image_tag("brittany.jpeg", :alt => "Brittany Brassell") %>
+						      <div class="caption">
+						        <h2>Brittany<br>Brassell</h2>
+						      </div>
+						    </div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	</div>
 </div>
 
-<script>
+<script><!-- Google Place Predictor Script -->
 var placeSearch, autocomplete, place;
-
 function initAutocomplete() {
-  // Create the autocomplete object, restricting the search to geographical
-  // location types.
-  autocomplete = new google.maps.places.Autocomplete(
-      /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-      {types: ['geocode']});
-
-  // When the user selects an address from the dropdown, populate the address
-  // fields in the form.
-  autocomplete.addListener('place_changed', function() {
-    place = autocomplete.getPlace();
-    // update hidden form input with place data
-    $('#place-search input[name="location[name]"]').val(place.formatted_address);
-  });
-}
-
+  	// Create the autocomplete object, restricting the search to geographical
+  	// location types.
+  	autocomplete = new google.maps.places.Autocomplete({
+    /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+    	types: ['geocode']
+    });
+  	// When the user selects an address from the dropdown, populate the address
+  	// fields in the form.
+  	autocomplete.addListener('place_changed', function() {
+	    place = autocomplete.getPlace();
+	    // update hidden form input with place data
+	    $('#place-search input[name="location[name]"]').val(place.formatted_address);
+  	});
+};
 </script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= @maps_key %>&libraries=places&callback=initAutocomplete"></script>
-
-
-
-
