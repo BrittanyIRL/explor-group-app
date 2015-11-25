@@ -138,26 +138,53 @@ a:active {
 }
 
 //modal styling
+
+.linea-icon {
+   font-family: 'linea-basic-10';
+   font-size: 20px;
+}
+
 .modal-content {
 	font-family: "roboto";
 	h4.modal-title {
 		font-family: "roboto";
 		font-weight: bold;
-	};
-	input#user_email.form-control {
-		border: none;
-		border-radius: 0px;
-		border-bottom: 1px solid #ccc;
-		box-shadow: none;
+		font-size: 1.8em;
 	}
-	input#user_password.form-control {
-		border: none;
-		border-radius: 0px;
-		border-bottom: 1px solid #ccc;
-		box-shadow: none;
-	}
+		input#user_email.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}
+		input#user_name.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}
+		input#user_password.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}	
+		input#user_password_confirmation.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}	
+		input.btn.btn-default {
+			font-size: 1.2em;
+			border-radius: 0px;
+		}
 
+	.control-label {
+		font-size: 1.2em;
+	}
 }
+
 
 
 
