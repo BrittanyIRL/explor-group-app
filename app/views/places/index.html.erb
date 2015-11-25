@@ -1,4 +1,14 @@
+<%= @locations.length %>
+<%= @current_user %>
 
+<% if @locations.length == 0 %>
+	<div class="emptyUser">
+		<h3>Seems like nothing has been saved. Why not search for some places to visit on your next trip and then save them to come back to later?</h3>		
+		<h2><%= link_to 'Start Exploring', '/' %></h2>
+	</div>
+<% end %>
+
+<% if @locations.length != 0 %>
 <div class="container" style="margin-bottom: 150px">
 <!-- location for loop starts -->
 <% @locations.each do |l| %>
@@ -47,9 +57,8 @@
 	  </div>
 	</div>
 <% end %>
-
+<% end %>
 </div>
-
 
  
 
