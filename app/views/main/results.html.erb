@@ -52,7 +52,7 @@
 		                    <button class="btn btn-social">
 							<% rating = restaurant["rating"] %>
 		                    <% for i in 1..rating %>
-		                    	<i class="pe-7s-star"></i>
+		                    	<span class="linea-icon">&#xe013;</span>
 		                    <% end %>
 		                    </button>
 							<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
@@ -106,7 +106,7 @@
 	                    <button class="btn btn-social">
 	                    <% rating = item["rating"] %>
 	                    <% for i in 1..rating %>
-	                    	<i class="pe-7s-star"></i>
+	                    	<span class="linea-icon">&#xe013;</span>
 	                   	<% end %>
 	                    </button>
 						<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
@@ -159,7 +159,7 @@
 		                    <button class="btn btn-social">
 		                    <% rating = club["rating"] %>
 		                    <% for i in 1..rating %>
-		                    	<i class="pe-7s-star"></i>
+		                    	<span class="linea-icon">&#xe013;</span>
 		                   	<% end %>
 		                    </button>
 							<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
