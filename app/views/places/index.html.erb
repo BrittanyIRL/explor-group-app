@@ -1,13 +1,4 @@
-<% if @locations.length == 0 %>
-	<div class="emptyUser">
-		<h3>Seems like nothing has been saved. Why not search for some places to visit on your next trip and then save them to come back to later?</h3>
-		
-		<h2><%= link_to 'Start Exploring', '/' %></h2>
-	</div>
-<% end %>
 
-<% if @locations.length != 0 %>
-<p> kjadakdls;afs</p>
 <div class="container" style="margin-bottom: 150px">
 <!-- location for loop starts -->
 <% @locations.each do |l| %>
@@ -41,7 +32,7 @@
 					<% end %>
 				</div>
 				<div class="status">
-<!-- 					<%= bootstrap_form_for :favorite do |favorite| %>
+ 					<%= bootstrap_form_for :favorite do |favorite| %>
 						<% if f.status == true %>
 						<%= label_tag(:status, "Been there, done that!") %>
 						<%= check_box_tag :status, f.status, true, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
@@ -49,15 +40,17 @@
 						<%= label_tag(:status, "Gotta see it!") %>
 						<%= check_box_tag :status, f.status, false, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
 						<% end %>
-				 	<% end %> -->
+				 	<% end %>
 				</div>
 			</div>
 		<% end %>
 	  </div>
 	</div>
 <% end %>
+
 </div>
-<% end %>
+
+
  
 
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -75,13 +68,13 @@
 		});
   	});
 
-    $(function() {
+  
     $(".location").show().accordion({
         active: false,
         autoHeight: false,
         navigation: true,
         collapsible: true
     });
-    });
+   
   </script>
 

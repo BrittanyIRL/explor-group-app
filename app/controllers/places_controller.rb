@@ -2,6 +2,7 @@ class PlacesController < ApplicationController
   before_action :is_authenticated?
   
   def index
+    puts @current_user
     @locations = @current_user.locations.all
     @photo_prefix = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="
     @key = "&key=" + ENV['GOOGLE_PLACES_KEY']
