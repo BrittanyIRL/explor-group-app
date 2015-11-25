@@ -200,6 +200,36 @@ a:active {
 }
 
 
+/* partials */
+
+.partials {
+	z-index: 500;
+	position: absolute;
+	width: 50%;
+	float: right;
+	background-color: transparent;
+	color: #FEB41C;
+
+}
+
+
+
+.partials {
+    position: absolute;
+    padding: .25em;
+	width: 100%;
+	float: right;
+	background-color: transparent;
+	color: #FEB41C;
+
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+     opacity: 1;
+}
+
+
 
 
 
