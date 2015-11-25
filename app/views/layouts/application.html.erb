@@ -6,28 +6,24 @@
   <link rel="stylesheet" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css">
   <link rel="icon" href="<%= asset_path( 'basic_globe.png' ) %>" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="jquery.airport-1.1.source.js"></script>
-
+  <script src="/assets/jquery.airport-1.1.source.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <title>Explor</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="se-pre-con"></div>
+  <div class="se-pre-con"></div>
   <nav>
-	    
 	    <ul class="navigation">
-		    <% if @current_user %>
-
+		  <% if @current_user %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <span class="linea-icon">P</span>
-           <span class="caret"></span></a>
+            <span class="linea-icon">P</span>
+            <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu dropdown-menu-right">
             <li><a href="/places">My Places</a></li>
             <li role="separator" class="divider"></li>
@@ -38,12 +34,10 @@
             <li><%= link_to 'Logout', logout_path %></li>
           </ul>
         </li>
-		      
-		    <% else %>
-		      <li><a data-toggle="modal" href='#login'>Login</a></li>
-		      <li><a data-toggle="modal" href='#signup'>Signup</a></li>
-		    <% end %>
-
+		  <% else %>
+		    <li><a data-toggle="modal" href='#login'>Login</a></li>
+		    <li><a data-toggle="modal" href='#signup'>Signup</a></li>
+		  <% end %>
 	    </ul>
 			  <% if @current_user %>
 			    <p>Hello, <%= @current_user.name %>.</p>
@@ -69,7 +63,6 @@
       </div>
      </div>
   </div>
-
   <div class="modal fade" id="signup">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -83,14 +76,13 @@
       </div>
      </div>
   </div>
-<footer>
-  <h1><a href="/#explor">Expl<span class="linea-icon">S</span>r</a></h1>
-  <ul>
-    <li>
-      <small>Copyright  &copy; 2015 A. Bautista, B. Brassel & J. Sakalys</small>
-      </li>
-  </ul>
-</footer>
+  <footer>
+    <h1><a href="/#explor">Expl<span class="linea-icon">S</span>r</a></h1>
+    <ul>
+      <li>
+        <small>Copyright  &copy; 2015 A. Bautista, B. Brassell & J. Sakalys</small>
+        </li>
+    </ul>
+  </footer>
 </body>
-
 </html>
