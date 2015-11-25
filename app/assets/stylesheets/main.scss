@@ -172,7 +172,7 @@
 	.column {
 		width: 25%;
 		margin-top: -10em;
-		padding: 0;
+		padding: 10px;
 		float:left;
 		box-sizing: inherit;
 		.columnImage {
@@ -185,7 +185,12 @@
 		h2, p {
 			margin: 0;
 			padding: 0;
+			
 		}
+	}
+	h2 {
+		font-family: 'Raleway';
+		text-align: left;
 	}
 }
 
@@ -280,6 +285,7 @@ h2.location {
 
 .dropdown-menu>li>a {
 	color: white;
+	padding-right: 0px;
 }
 
 .dropdown-menu>li>a:hover {
