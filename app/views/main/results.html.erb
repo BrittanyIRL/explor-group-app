@@ -30,7 +30,7 @@
     </div><!-- end section -->
 
     <div class="section rowParent"> 
-	    <h2>Popular Food and Drink</h2>
+	    <h2>Food and Drink</h2>
 	    <% index = 0 %>	
 		<% @google_restaurants.each do |restaurant| %>
 			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["price_level"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
@@ -93,7 +93,14 @@
                	<div class="filter"></div>
 	                <div class="social-line" data-buttons="3">
 	                    <button class="btn btn-social">
-	                    hi
+	                    <% if item["price_level"] %>
+	                    <% price = item["price_level"] %>
+		                    <% for i in 1..price %>
+		                    	$
+		                    <% end %>
+		                <% else %>
+		                	N/A
+		                <% end %>
 	                    </button>
 	                    <button class="btn btn-social">
 	                    <% rating = item["rating"] %>
@@ -140,7 +147,14 @@
                	<div class="filter"></div>
 	                <div class="social-line" data-buttons="3">
 	                    <button class="btn btn-social">
-	                    hi
+	                    <% if club["price_level"] %>
+	                    <% price = club["price_level"] %>
+		                    <% for i in 1..price %>
+		                    	$
+		                    <% end %>
+		                <% else %>
+		                	N/A
+		                <% end %>
 	                    </button>
 	                    <button class="btn btn-social">
 	                    <% rating = club["rating"] %>
