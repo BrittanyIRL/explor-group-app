@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'airport';
-  src: url('Airport.ttf');
+  src: url('Airport.otf');
 }
 
 /*declaring variables for SASS*/
@@ -143,6 +143,53 @@ a:active {
 .section {
 padding: 20px;
 	}
+
+.linea-icon {
+   font-family: 'linea-basic-10';
+   font-size: 20px;
+}
+
+.modal-content {
+	font-family: "roboto";
+	h4.modal-title {
+		font-family: "roboto";
+		font-weight: bold;
+		font-size: 1.8em;
+	}
+		input#user_email.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}
+		input#user_name.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}
+		input#user_password.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}	
+		input#user_password_confirmation.form-control {
+			border: none;
+			border-radius: 0px;
+			border-bottom: 1px solid #ccc;
+			box-shadow: none;
+		}	
+		input.btn.btn-default {
+			font-size: 1.2em;
+			border-radius: 0px;
+		}
+
+	.control-label {
+		font-size: 1.2em;
+	}
+}
+
 
 
 
