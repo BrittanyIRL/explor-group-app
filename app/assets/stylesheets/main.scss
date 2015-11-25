@@ -182,7 +182,7 @@
 	h2 {
 		text-align: center;
 		font-size: 4em;
-		margin: 1em 0 0 0;
+		margin: 0;
 	}
 }
 .rowParent {
@@ -246,9 +246,7 @@
 h2.location {
 	text-align: left;
 	color: white;
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: 2px;
-	
+	font-family: 'Roboto-Thin', sans-serif;	
 }
 
 .weatherContainer {
@@ -310,6 +308,9 @@ footer ul li {
 	font-size: 20px;
 }
 
+.section.weatherBackground {
+	height: 100vh;
+}
 
 
 
