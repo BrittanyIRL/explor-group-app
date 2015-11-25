@@ -10,70 +10,11 @@ $(document).ready(function() {
         //Navigation
         //menu: '#menu',
         lockAnchors: false,
-        anchors:['explor', 'about', 'developers'],
+        anchors: ['explor', 'about', 'developers'],
         navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['Start Exploring', 'About Explor', 'The Team'],
         showActiveTooltip: true,
-        slidesNavigation: true,
-        slidesNavPosition: 'top',
-
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 700,
-        autoScrolling: false,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
-        scrollBar: true,
-        easing: 'easeInOutCubic',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: true,
-        continuousVertical: false,
-        normalScrollElements: '',
-        scrollOverflow: true,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
-
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-        resize : false, //this shrinks text on viewport size change
-        sectionsColor : ['rgba(162, 222, 208,0.6)', '#FEB41C', '#5E7C88'],
-        paddingTop: '10px',
-        paddingBottom: '10px',
-        fixedElements: '#header, .footer, nav',
-        responsiveWidth: 800,
-        responsiveHeight: 0,
-
-        //Custom selectors
-        sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-    });
-
-	$('#results').fullpage({
-        //Navigation
-        //menu: '#resultsMenu',
-        lockAnchors: false,
-        anchors:['main', 'dining', 'grid', 'arts', 'nightlife'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Weather', "Food and Drink", "Arts & Culture", "Nightlife" ],
-        showActiveTooltip: false,
         slidesNavigation: true,
         slidesNavPosition: 'top',
 
@@ -103,10 +44,69 @@ $(document).ready(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
+        resize : false, //this shrinks text on viewport size change
+        sectionsColor : ['rgba(162, 222, 208,0.6)', '#FEB41C', '#5E7C88'],
+        paddingTop: '50px',
+        paddingBottom: '50px',
+        fixedElements: '#header, .footer, nav',
+        responsiveWidth: 800,
+        responsiveHeight: 0,
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+
+	$('#results').fullpage({
+        //Navigation
+        //menu: '#resultsMenu',
+        lockAnchors: false,
+        anchors: ['weather', 'dining', 'arts', 'nightlife'],
+        navigation: true,
+        navigationPosition: 'right',
+        /* navigationTooltips: ['Weather', "Food and Drink", "Arts & Culture", "Nightlife" ], */
+        showActiveTooltip: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        scrollBar: true,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        normalScrollElements: '',
+        scrollOverflow: true,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        controlArrows: true,
+        verticalCentered: true,
         resize : false,
-        sectionsColor : ['#fff', '#fff'],
-        paddingTop: '20px',
-        paddingBottom: '20px',
+        sectionsColor : [],
+        paddingTop: '50px',
+        paddingBottom: '50px',
         fixedElements: 'footer, nav',
         responsiveWidth: 600,
         responsiveHeight: 0,

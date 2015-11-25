@@ -209,8 +209,10 @@
 		}
 	}
 	h2 {
-		font-family: 'Raleway';
+		font-family: 'Roboto-Thin';
 		text-align: left;
+		color: white;
+		padding-left: 10px;
 	}
 }
 
@@ -257,6 +259,7 @@ h2.location {
 	
 }
 .weather-forecast {
+	margin-bottom: 50px;
 	.current-conditions {
 		width: 30%;
 		display: inline-block;
@@ -318,6 +321,11 @@ footer ul li {
 	height: 100vh;
 }
 
+.fp-slidesNav.bottom {
+	bottom: 100px;
+	color: white;
+}
 
-
-
+#results > div.section.weatherBackground.fp-section.active.fp-table > div {
+	vertical-align: bottom;
+}

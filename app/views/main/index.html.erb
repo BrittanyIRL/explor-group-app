@@ -1,11 +1,11 @@
 <!-- each 'section' is a fullpage for fullpage.js, the container for fullpage is #landing -->
-<div class="landingPageNavigation">
+<!-- <div class="landingPageNavigation">
 	<ul>
         <li><a href="#explor">Start Exploring</a></li>	
 	    <li><a href="#about">About Explor</a></li>
         <li><a href="#developers">The Team</a></li>
     </ul>
-</div>
+</div> -->
 
 <div id="landing">
     <div class="section first-page">
@@ -83,10 +83,10 @@ var placeSearch, autocomplete, place;
 function initAutocomplete() {
   	// Create the autocomplete object, restricting the search to geographical
   	// location types.
-  	autocomplete = new google.maps.places.Autocomplete({
+  	autocomplete = new google.maps.places.Autocomplete(
     /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-    	types: ['geocode']
-    });
+    	{types: ['geocode']}
+    );
   	// When the user selects an address from the dropdown, populate the address
   	// fields in the form.
   	autocomplete.addListener('place_changed', function() {

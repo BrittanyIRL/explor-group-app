@@ -2,8 +2,7 @@
 	] %>
 
 <div id="results" class="resultsPage">
-	<div class="section weatherBackground" style="background: linear-gradient(#5E7C88, #FFFFFF, transparent 70%), url('<%= @f_background[0] %>'); background-repeat: no-repeat; background-size: cover;">
-    <!--currently not showing up -->
+	<div class="section weatherBackground" style="background: linear-gradient(rgba(94, 124, 136, 0.8), rgba(255, 255, 255, 0.4), transparent 70%), url('<%= @f_background[0] %>'); background-repeat: no-repeat; background-size: cover;">
    		<h2 class="location">
    			<%= @location %>
    		</h2> 
@@ -29,8 +28,8 @@
         </div>
     </div><!-- end section -->
 
-    <div class="section rowParent"> 
-	    <h2>Food and Drink</h2>
+    <div class="section rowParent" style="background-color: transparent"> 
+	    <h2>Food & Drink</h2>
 	    <% index = 0 %>	
 		<% @google_restaurants.each do |restaurant| %>
 			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["price_level"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
@@ -78,10 +77,10 @@
 			<% end %> <!-- end if -->
 		<% end %><!-- end google_restaurants loop -->
 	</div><!--end section -->
-</div> <!-- what is this??? -->
+</div><!-- what is this??? -->
 
     <div class="section rowParent"><!-- section begin -->
-    <h2>Arts & Culture</h2>
+    <h2>Art & Culture</h2>
     <% art_index = 0 %>	
 		<% @google_art.each do |item| %>
 			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
@@ -132,10 +131,10 @@
 			<% end %> <!-- end if -->
 		<% end %> <!-- end google_restaurants loop -->
 	</div> <!-- end section -->
-</div><!-- what is this??? -->
+<!-- </div>what is this??? -->
 
     <div class="section rowParent"><!-- section begin -->
-	    <h2>Nightlife</h2>	
+	    <h2>Night Life</h2>
 	    <% nightlife_index = 0 %>
 		<% @google_clubs.each do |club| %>
 			<% if club["photos"] != nil && club["name"] != nil && club["rating"] && club["vicinity"] != nil %>	
@@ -185,9 +184,8 @@
 			<% nightlife_index += 1 %>
 			<% end %> <!-- end if -->
 		<% end %> <!-- end google_art loop -->
-	</div><!--end section -->	
-</div><!-- what is this?? -->
-
+	</div><!-- end section -->
+<!--</div> what is this?? -->
 
      
 

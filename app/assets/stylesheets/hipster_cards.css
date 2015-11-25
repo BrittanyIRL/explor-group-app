@@ -491,7 +491,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .section {
   padding: 30px 0;
   position: relative;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
 }
 
 .section-gray {
