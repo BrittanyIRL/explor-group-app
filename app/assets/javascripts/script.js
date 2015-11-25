@@ -69,10 +69,10 @@ $(document).ready(function() {
         //Navigation
         //menu: '#resultsMenu',
         lockAnchors: false,
-        anchors:['main', 'dining', 'grid', 'arts', 'nightlife', "grid"],
+        anchors:['main', 'dining', 'grid', 'arts', 'nightlife'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Weather', "Popular Food and Drink", "Arts", "Nightlife", "Grid"],
+        navigationTooltips: ['Weather', "Food and Drink", "Arts & Culture", "Nightlife" ],
         showActiveTooltip: false,
         slidesNavigation: true,
         slidesNavPosition: 'top',
