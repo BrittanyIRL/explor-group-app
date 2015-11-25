@@ -4,6 +4,7 @@ require 'typhoeus'
 
 class MainController < ApplicationController
   def index
+    @enable_nav_links = true
   end
   
   def results

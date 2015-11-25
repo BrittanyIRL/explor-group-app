@@ -9,7 +9,7 @@
 
 /*declaring variables for SASS*/
 $font-stack-body: 'Raleway', sans-serif;
-$font-stack-header: 'Merriweather', serif;
+$font-stack-header: 'Raleway', serif;
 
 @font-face {
 	font-family: "Airport"; src:font-url('Airport.otf');
@@ -53,12 +53,10 @@ nav {
 				text-decoration: none;
 				margin: auto 1em;
 				vertical-align: top;
-
 			}
 		}
 	}
 }
-
 footer {
 	z-index: 999;
 	background-color: rgba(10,10,10,.5); 
@@ -66,7 +64,7 @@ footer {
 	margin: .25em 0 0 0;
 	padding: .5em 0;
 	width: 100%;
-	height: 6em;
+	height: 5em;
 	position: fixed;
 	bottom: 0;
 	h1 {
@@ -120,29 +118,20 @@ h1, h2, h3, h4, h5 {
 }
 
 
-a, a:link {
+a, a:link, a:visited {
 	color: white; /* #2ECC71; */
 	text-decoration: none;
 }
-
 
 a:hover {
 	color: #FEB41C;
 	text-decoration: none;
 }
 
-// a:visited {
-// 	color: #FEB41C;
-// 	text-decoration: none;
-// }
-
-
 a:active {
 	color: #FEB41C;
 	text-decoration: none;
 }
-
-
 
 .section {
 	padding: 20px;
@@ -224,9 +213,37 @@ a:active {
      opacity: 1;
 }
 
+.thumbnail {
+	border: 0px;
+}
 
+body > nav > ul.nav.navbar-nav > li > a:hover {
+	background-color: transparent;
+}
 
+body > nav > ul.nav.navbar-nav > li > a:active {
+	background-color: transparent;
+}
 
+body > nav > ul.nav.navbar-nav > li > a:visited {
+	background-color: transparent;
+}
 
+body > nav > ul.nav.navbar-nav > li > a:link {
+	background-color: transparent;
+}
 
+.fp-controlArrow.fp-next {
+	right: 50px;
+	opacity: .5;
+}
+
+.fp-controlArrow.fp-prev {
+	left: 50px;
+	opacity: .5;
+}
+
+#fp-nav.right {
+	right: 0px;
+}
 

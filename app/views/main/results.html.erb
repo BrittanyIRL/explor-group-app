@@ -2,44 +2,42 @@
 	] %>
 
 <div id="results" class="resultsPage">
-	<div class="section weatherBackground" style="background: linear-gradient(#5E7C88, #FFFFFF, transparent 70%), url('<%= @f_background[0] %>'); background-repeat: no-repeat; background-size: cover;">
-    <!--currently not showing up -->
-   		<h2 class="location">
-   			<%= @location %>
-   		</h2> 
-    <!-- weather forecast -->
-
+	<div class="section weatherBackground" style="background-color: #24221F; background: linear-gradient(rgba(94, 124, 136, 0.8) 0%, rgba(255, 255, 255, 0.4) 30%, transparent 100%), url('<%= @f_background[0] %>'); background-repeat: no-repeat; background-size: cover;"><!-- start section -->
         <div class="weather-forecast">
+	   		<h2 class="location">
+	   			<%= @location %>
+	   		</h2>
             <div class="current-conditions">
-                <%= @weather['condition']['date'] %><br>
-                <% current_code = @weather['condition']['code'].to_i %><br>
-                <span class="icon icon-<%= weather_codes[current_code] %>"></span><br>
-                <span class="temp"><%= @weather['condition']['temp'] %></span><br>
-                <%= @weather['condition']['text'] %><br>
+                <p><%= @weather['condition']['date'] %></p>
+                <% current_code = @weather['condition']['code'].to_i %>
+                <span class="icon weather-icon-main icon-<%= weather_codes[current_code] %>"></span>
+                <span class="temp"><%= @weather['condition']['temp'] %>&deg;</span>
             </div>
             <% @weather['forecast'].each do |day| %>
             <div class="daily-forecast">
                 <span class="badge"><%= day['day'] %></span><br>
                 <% code = day['code'].to_i %>
-                <span class="icon icon-<%= weather_codes[code] %>"></span><br>
-                <%= day['text'] %><br>
-                <span class="temp-high"><%= day['high'] %></span><span class="temp-low"><%= day['low'] %></span>                
+                <span class="icon weather-icon icon-<%= weather_codes[code] %>"></span>
+                <p><%= day['text'] %></p>
+                <div class="high-low">
+                	<span class="temp-high"><%= day['high'] %></span><span class="temp-low"><%= day['low'] %></span>
+                </div>        
             </div>
             <% end %>
         </div>
     </div><!-- end section -->
-
-    <div class="section rowParent"> 
-	    <h2>Food and Drink</h2>
+    <div class="section rowParent" style="background-color: transparent"><!-- start section -->
+	    <h2>Food & Drink</h2>
 	    <% index = 0 %>	
 		<% @google_restaurants.each do |restaurant| %>
 			<% if restaurant["photos"] != nil && restaurant["name"] != nil && restaurant["price_level"] != nil && restaurant["rating"] && restaurant["vicinity"] != nil %>	
 			<% if index % 4 == 0 %><div class="slide"><% end %>
-			<div class="column">
-			<div class="card" data-background="color" data-color="black"><!-- card begin -->             
-	            <div class="header" style="background-image: url('<%= @photo_prefix + restaurant["photos"][0]["photo_reference"] + @key %>'); background-size: cover; background-position: 50% 50%;">
-	                <img src="<%= @photo_prefix + restaurant["photos"][0]["photo_reference"] + @key %>">
-	               	<div class="filter"></div>
+			<div class="column"><!-- column begin -->
+				<div class="card" data-background="color" data-color="black"><!-- card begin -->             
+		            <div class="header" style="background-image: url('<%= @photo_prefix + restaurant["photos"][0]["photo_reference"] + @key %>'); background-size: cover; background-position: 50% 50%;">
+		                <img src="<%= @photo_prefix + restaurant["photos"][0]["photo_reference"] + @key %>">
+		               	<div class="filter">
+		               	</div>
 		                <div class="social-line" data-buttons="3">
 		                    <button class="btn btn-social">
 		                    <% price = restaurant["price_level"] %>
@@ -53,40 +51,39 @@
 		                    	<i class="pe-7s-star"></i>
 		                    <% end %>
 		                    </button>
-		        		<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
-				         <%= f.hidden_field :name, value: @location %>
-				          <%= f.hidden_field :categories, value: restaurant['types'] %>
-				         <%= f.hidden_field :title, value: restaurant['name'] %>
-				         <%= f.hidden_field :price_level, value: restaurant['price_level'] %>
-				          <%= f.hidden_field :rating, value: restaurant['rating'] %>
-				          <%= f.hidden_field :vicinity, value: restaurant['vicinity'] %>
-				          <%= f.hidden_field :img, value: restaurant["photos"][0]["photo_reference"] %>
-				           <%= f.hidden_field :place_id, value: restaurant['place_id'] %>
-			              <%= f.submit 'Save', class: 'btn btn-social'%>
-			          <% end %>
-	                </div>
-            	</div>
-			    <div class="content">
-	                <h6 class="category"><%= restaurant["types"][0] %></h6>
-	                <h4 class="title"><a href="#"><%= restaurant["name"] %></a></h4>
-	                <p class="description"><%= restaurant["vicinity"] %></p>
-            	</div>
-        	</div><!-- card end -->
+							<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+								<%= f.hidden_field :name, value: @location %>
+								<%= f.hidden_field :categories, value: restaurant['types'] %>
+								<%= f.hidden_field :title, value: restaurant['name'] %>
+								<%= f.hidden_field :price_level, value: restaurant['price_level'] %>
+								<%= f.hidden_field :rating, value: restaurant['rating'] %>
+								<%= f.hidden_field :vicinity, value: restaurant['vicinity'] %>
+								<%= f.hidden_field :img, value: restaurant["photos"][0]["photo_reference"] %>
+								<%= f.hidden_field :place_id, value: restaurant['place_id'] %>
+								<%= f.submit 'Save', class: 'btn btn-social'%>
+			          		<% end %>
+	                	</div>
+	            	</div>
+				    <div class="content">
+		                <h6 class="category"><%= restaurant["types"][0] %></h6>
+		                <h4 class="title"><a href="#"><%= restaurant["name"] %></a></h4>
+		                <p class="description"><%= restaurant["vicinity"] %></p>
+	            	</div>
+	        	</div><!-- card end -->
 			</div><!-- column end -->
 			<% if index % 4 == 3 %></div><% end %>
 			<% index += 1 %>
 			<% end %> <!-- end if -->
 		<% end %><!-- end google_restaurants loop -->
 	</div><!--end section -->
-</div> <!-- what is this??? -->
-
+</div><!-- what is this??? -->
     <div class="section rowParent"><!-- section begin -->
-    <h2>Arts & Culture</h2>
+    <h2>Art & Culture</h2>
     <% art_index = 0 %>	
 		<% @google_art.each do |item| %>
 			<% if item["photos"] != nil && item["name"] != nil && item["rating"] && item["vicinity"] != nil %>
 			<% if art_index % 4 == 0 %><div class="slide"><% end %>			
-			<div class="column"><!-- column start -->
+		<div class="column"><!-- column start -->
 			<div class="card" data-background="color" data-color="black"><!-- card begin -->        
             	<div class="header" style="background-image: url('<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>'); background-size: cover; background-position: 50% 50%;">
                 <img src="<%= @photo_prefix + item["photos"][0]["photo_reference"] + @key %>">
@@ -108,16 +105,16 @@
 	                    	<i class="pe-7s-star"></i>
 	                   	<% end %>
 	                    </button>
-		        		<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
-				         <%= f.hidden_field :name, value: @location %>
-				          <%= f.hidden_field :categories, value: item['types'] %>
-				         <%= f.hidden_field :title, value: item['name'] %>
-				          <%= f.hidden_field :rating, value: item['rating'] %>
-				          <%= f.hidden_field :vicinity, value: item['vicinity'] %>
-				          <%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
-				           <%= f.hidden_field :place_id, value: item['place_id'] %>
-			              <%= f.submit 'Save', class: 'btn btn-social'%>
-			          <% end %>
+						<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+							<%= f.hidden_field :name, value: @location %>
+							<%= f.hidden_field :categories, value: item['types'] %>
+							<%= f.hidden_field :title, value: item['name'] %>
+							<%= f.hidden_field :rating, value: item['rating'] %>
+							<%= f.hidden_field :vicinity, value: item['vicinity'] %>
+							<%= f.hidden_field :img, value: item["photos"][0]["photo_reference"] %>
+							<%= f.hidden_field :place_id, value: item['place_id'] %>
+							<%= f.submit 'Save', class: 'btn btn-social'%>
+			          	<% end %>
                 	</div>
         		</div>
 		    	<div class="content">
@@ -126,76 +123,66 @@
 	            	<p class="description"><%= item["vicinity"] %></p>
         		</div>                                           
         	</div><!-- card end -->
-			</div><!-- column end -->
+		</div><!-- column end -->
 			<% if art_index % 4 == 3 %></div><% end %>
 			<% art_index += 1 %>
 			<% end %> <!-- end if -->
 		<% end %> <!-- end google_restaurants loop -->
 	</div> <!-- end section -->
 </div><!-- what is this??? -->
-
     <div class="section rowParent"><!-- section begin -->
-	    <h2>Nightlife</h2>	
+	    <h2>Night Life</h2>
 	    <% nightlife_index = 0 %>
 		<% @google_clubs.each do |club| %>
 			<% if club["photos"] != nil && club["name"] != nil && club["rating"] && club["vicinity"] != nil %>	
 			<% if nightlife_index % 4 == 0 %><div class="slide"><% end %>			
 			<div class="column"><!-- column start -->
-			<div class="card" data-background="color" data-color="black"><!-- card begin -->        
-            	<div class="header" style="background-image: url('<%= @photo_prefix + club["photos"][0]["photo_reference"] + @key %>'); background-size: cover; background-position: 50% 50%;">
-                <img src="<%= @photo_prefix + club["photos"][0]["photo_reference"] + @key %>">
-               	<div class="filter"></div>
-	                <div class="social-line" data-buttons="3">
-	                    <button class="btn btn-social">
-	                    <% if club["price_level"] %>
-	                    <% price = club["price_level"] %>
-		                    <% for i in 1..price %>
-		                    	$
-		                    <% end %>
-		                <% else %>
-		                	N/A
-		                <% end %>
-	                    </button>
-	                    <button class="btn btn-social">
-	                    <% rating = club["rating"] %>
-	                    <% for i in 1..rating %>
-	                    	<i class="pe-7s-star"></i>
-	                   	<% end %>
-	                    </button>
-		        		<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
-				         <%= f.hidden_field :name, value: @location %>
-				          <%= f.hidden_field :categories, value: club['types'] %>
-				         <%= f.hidden_field :title, value: club['name'] %>
-				          <%= f.hidden_field :rating, value: club['rating'] %>
-				          <%= f.hidden_field :vicinity, value: club['vicinity'] %>
-				          <%= f.hidden_field :img, value: club["photos"][0]["photo_reference"] %>
-				           <%= f.hidden_field :place_id, value: club['place_id'] %>
-			              <%= f.submit 'Save', class: 'btn btn-social'%>
-			          <% end %>
-                	</div>
-        		</div>
-		    	<div class="content">
-	            	<h6 class="category"><%= club["types"][0] %></h6>
-	            	<h4 class="title"><a href="#"><%= club["name"] %></a></h4>
-	            	<p class="description"><%= club["vicinity"] %></p>
-        		</div>                                           
-        	</div><!-- card end -->
+				<div class="card" data-background="color" data-color="black"><!-- card begin -->        
+	            	<div class="header" style="background-image: url('<%= @photo_prefix + club["photos"][0]["photo_reference"] + @key %>'); background-size: cover; background-position: 50% 50%;">
+	                <img src="<%= @photo_prefix + club["photos"][0]["photo_reference"] + @key %>">
+	               	<div class="filter"></div>
+		                <div class="social-line" data-buttons="3">
+		                    <button class="btn btn-social">
+		                    <% if club["price_level"] %>
+		                    <% price = club["price_level"] %>
+			                    <% for i in 1..price %>
+			                    	$
+			                    <% end %>
+			                <% else %>
+			                	N/A
+			                <% end %>
+		                    </button>
+		                    <button class="btn btn-social">
+		                    <% rating = club["rating"] %>
+		                    <% for i in 1..rating %>
+		                    	<i class="pe-7s-star"></i>
+		                   	<% end %>
+		                    </button>
+							<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+								<%= f.hidden_field :name, value: @location %>
+								<%= f.hidden_field :categories, value: club['types'] %>
+								<%= f.hidden_field :title, value: club['name'] %>
+								<%= f.hidden_field :rating, value: club['rating'] %>
+								<%= f.hidden_field :vicinity, value: club['vicinity'] %>
+								<%= f.hidden_field :img, value: club["photos"][0]["photo_reference"] %>
+								<%= f.hidden_field :place_id, value: club['place_id'] %>
+								<%= f.submit 'Save', class: 'btn btn-social'%>
+				          	<% end %>
+	                	</div>
+	        		</div>
+			    	<div class="content">
+		            	<h6 class="category"><%= club["types"][0] %></h6>
+		            	<h4 class="title"><a href="#"><%= club["name"] %></a></h4>
+		            	<p class="description"><%= club["vicinity"] %></p>
+	        		</div>                                           
+	        	</div><!-- card end -->
 			</div><!-- column end -->
 			<% if nightlife_index % 4 == 3 %></div><% end %>
 			<% nightlife_index += 1 %>
 			<% end %> <!-- end if -->
 		<% end %> <!-- end google_art loop -->
-	</div><!--end section -->	
+	</div><!-- end section -->
 </div><!-- what is this?? -->
 
-
-     
-
-
-
-
-
-
-
-
+ 
 

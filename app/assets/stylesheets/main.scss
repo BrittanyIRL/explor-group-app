@@ -141,7 +141,6 @@
 .about-creators {
 	font-family: "Roboto-Thin";
 	font-size: 2em;
-	margin: 0 20%;
 	color: white;
 }
 
@@ -185,6 +184,7 @@
 		text-align: center;
 		font-size: 4em;
 		margin: 0;
+		padding-top: 30px;
 	}
 }
 .rowParent {
@@ -210,8 +210,10 @@
 		}
 	}
 	h2 {
-		font-family: 'Raleway';
+		font-family: 'Roboto-Thin';
 		text-align: left;
+		color: white;
+		padding-left: 10px;
 	}
 }
 
@@ -248,22 +250,31 @@
 h2.location {
 	text-align: left;
 	color: white;
-	font-family: 'Roboto-Thin', sans-serif;	
+	font-family: 'Roboto-Thin', sans-serif;
+	padding-left: 20px;
 }
 
 .weatherContainer {
 	position: relative;
 	width: 100%;
-
-	
 }
 .weather-forecast {
+	margin-bottom: 0;
+	background-color: rgba(10,10,10,.5);
+	border-bottom: solid 1px rgba(255,255,255,.5);
 	.current-conditions {
 		width: 30%;
 		display: inline-block;
+		padding: 20px;
+		text-align: center;
 		.temp {
-			font-size: 28px;
+			font-size: 80px;
+			color: white;
+			padding-left: 10px;
 		}
+	}
+	p {
+		color: white;
 	}
 	.daily-forecast {
 		width: 12%;
@@ -274,11 +285,11 @@ h2.location {
 		padding: 5px;
 	}
 	.temp-high {
-		color: red;
+		color: #FEB41C;
 		margin-right: 10px;
 	}
 	.temp-low {
-		color: blue;
+		color: #5E7C88;
 	}
 }
 
@@ -310,10 +321,62 @@ footer ul li {
 	font-size: 20px;
 }
 
+.app-icon {
+	font-family: 'linea-basic-10';
+	font-size: 160px;
+}
+
 .section.weatherBackground {
 	height: 100vh;
 }
 
+.fp-slidesNav, #fp-nav {
+	opacity: .7;
+}
 
+#fp-nav ul li a span {
+	background-color: #FEB41C;
+}
 
+.fp-slidesNav ul li a span {
+	background-color: #5E7C88;
+}
 
+#fp-nav {
+	color: white;
+}
+
+.fp-slidesNav.bottom {
+	bottom: 100px;
+	color: white;
+}
+
+#results > div.section.weatherBackground.fp-section.fp-table > div {
+	vertical-align: bottom;
+}
+
+.weather-icon {
+	font-family: 'linea-basic-10';
+	font-size: 64px;
+	vertical-align: middle;
+	color: white;
+}
+
+.weather-icon-main {
+	font-family: 'linea-basic-10';
+	font-size: 100px;
+	color: white;
+}
+
+.badge {
+	background-color: rgba(0,0,0,.2);
+	padding: 5px;
+}
+
+#results > div.section.weatherBackground.fp-section {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.high-low {
+}
