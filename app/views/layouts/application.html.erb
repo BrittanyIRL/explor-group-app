@@ -35,8 +35,8 @@
           </ul>
         </li>
 		  <% else %>
-		    <li><a data-toggle="modal" href='#login'>Login</a></li>
-		    <li><a data-toggle="modal" href='#signup'>Signup</a></li>
+		    <li><a data-toggle="modal" href='#login'>Log In</a></li>
+		    <li><a data-toggle="modal" href='#signup'>Sign Up</a></li>
 		  <% end %>
 	    </ul>
 			  <% if @current_user %>
@@ -55,7 +55,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Login</h4>
+          <h4 class="modal-title">Log In</h4>
         </div>
         <div class="modal-body">
           <%= render 'sessions/form' %>
@@ -68,7 +68,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Signup</h4>
+          <h4 class="modal-title">Sign Up</h4>
         </div>
         <div class="modal-body">
           <%= render 'users/signupform' %>

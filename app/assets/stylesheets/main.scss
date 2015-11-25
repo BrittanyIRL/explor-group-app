@@ -42,15 +42,15 @@
 	margin: 0%;
 	display: inline-block;
 	float:left;
-	width: 50%;
+	width: 55%;
 	text-align: right;
 }
 
 #splash-title {
-	font-size: 180px;
+	font-size: 150px;
 	line-height: 200px;
 	vertical-align: middle;
-	font-family: "Airport", sans-serif;
+	font-family: "Raleway", sans-serif;
 	color: white;
 	text-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
@@ -82,7 +82,7 @@
 .animationContainer {
 	line-height: 250px;
 	vertical-align: middle;
-	width: 50%;
+	width: 45%;
 	float:right;
 	margin: 0;
 	text-align: left;
@@ -113,14 +113,16 @@
 }
 
 #first-page-submit {
-	border: 4px solid white;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-left: 20px;
 	color: white;
 	opacity: 1;
 	background-color: transparent;
-	font-family: 'Roboto-Thin';
+	font-family: 'Roboto-Thin', sans-serif;
 	font-size: 24px;
 	display: inline-block;
-	padding: 2px 50px;
+	padding: 10px 50px;
 }
 
 #first-page-submit:hover {
