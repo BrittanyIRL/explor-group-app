@@ -9,7 +9,20 @@
 	background: image-url('greece.jpeg');
 	background-size: cover;
 }
-
+/*autocomplete on landing */
+.pac-container{
+	background-color: rgba(255,255,255,0.7);
+	color: black;
+}
+.pac-icon {
+	display: none;
+}
+.pac-item {
+	color: #5E7C88;
+}
+.pac-item:hover {
+	background-color: rgba(255,255,255,0.7);
+}
 .splash {
 	margin: 0%;
 	display: inline-block;
