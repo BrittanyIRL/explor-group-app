@@ -1,10 +1,10 @@
 	<% weather_codes = ['weather-windgust','weather-tempest','weather-tempest','weather-tempest','weather-storm-32','weather-hail','weather-hail','weather-hail','weather-mistyrain','weather-mistyrain','weather-hail','weather-rain','weather-rain','weather-snow','weather-cloud-snowflake','weather-snow','weather-snow','weather-hail','weather-hail','weather-fog','weather-fog','weather-fog','weather-fog','weather-windgust','weather-wind', 'weather-snowflake','weather-cloud','weather-variable-halfmoon','weather-variable-sun','weather-variable-halfmoon','weather-variable-sun','weather-fullmoon','weather-sun','weather-moon','weather-sun','weather-hail','weather-sun','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-lightning','weather-cloud-drop','weather-snowflake','weather-cloud-snowflake','weather-snowflake','weather-variable-fullmoon','weather-storm-32','weather-snow','weather-cloud-lightning',''
 	] %>
 <div id="results" class="resultsPage">
-	<div class="section weatherBackground">
-	<img src="<%= @f_background[0] %>" class="weatherImage">
+	<div class="section weatherContainer">
+			<img src="<%= @f_background[0] %>" class="weatherImage">
     <!--currently not showing up -->
-    <h2 class="location"><%= @location %></h2> 
+   			 <h2 class="location"><%= @location %></h2> 
     <!-- weather forecast -->
         <div class="weather-forecast">
             <div class="current-conditions">
@@ -25,9 +25,9 @@
             </div>
             <% end %>
             
-
-        </div>
+            </div>
     </div>
+ 
    <!-- end weather -->
 
     <div class="section rowParent"> 

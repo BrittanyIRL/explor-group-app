@@ -41,7 +41,7 @@ $font-stack-header: 'Merriweather', serif;
 }
 
 nav {
-	z-indez: 999;
+	z-index: 999;
 	color: white; /* rgba(77, 175, 124, 0.9) ocean green*/
 	margin: .25em 0;
 	width: 100%;
@@ -70,7 +70,7 @@ nav {
 
 footer {
 	z-index: 999;
-	background-color: rgba(10,10,10,.2); 
+	background-color: rgba(10,10,10,.5); 
 	color: gray;
 	margin: .25em 0 0 0;
 	padding: .5em 0;
