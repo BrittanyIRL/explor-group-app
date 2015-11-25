@@ -131,6 +131,25 @@
 
 /*results page */
 
+.about-app {
+	font-family: "Roboto-Thin";
+	font-size: 2em;
+}
+
+.about-creators {
+	font-family: "Roboto-Thin";
+	font-size: 2em;
+	margin: 0 20%;
+	color: white;
+}
+
+.thumbnail {
+	max-width: 230px;
+	text-align: center;
+	h3 {
+		font-family: "Roboto-Thin";
+	}
+}
 
 .landingPageNavigation {
 	/* color: rgba(77, 175, 124, 0.9); ocean green*/

@@ -45,7 +45,7 @@ $(document).ready(function() {
         controlArrows: true,
         verticalCentered: true,
         resize : false, //this shrinks text on viewport size change
-        sectionsColor : ['rgba(162, 222, 208,0.6)', 'rgba(144, 198, 149, 0.6)', 'rgba(104, 195, 163, 0.6)'],
+        sectionsColor : ['rgba(162, 222, 208,0.6)', '#FEB41C', '#5E7C88'],
         paddingTop: '10px',
         paddingBottom: '10px',
         fixedElements: '#header, .footer, nav',
