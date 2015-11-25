@@ -7,6 +7,10 @@
 
 
 <div class="container">
+
+
+
+
 <% @locations.each do |l| %>
 	<div class="location">
 	  	<div class="placesTitle">
@@ -22,35 +26,46 @@
 	  	</div>
 
 	   	<div class="row">
-	    <% l.favorites.each do |f| %>
-			<div class="col-sm-6 col-sm-4">
-				<div class="infoBox">
-					<img src="<%= @photo_prefix + f.img + @key %>" />
-					<h3><%= f.title %></h3>
-					<p><%= f.categories %></p>
-					<address><%= f.vicinity %></address>
-					<p><%= f.rating %></p>
-					<% if f.price_level %>
-					<p><%= f.price_level %></p>
-					<% end %>
-				</div>
-				<div class="status">
- 					<%= bootstrap_form_for :favorite do |favorite| %>
-						<% if f.status == true %>
-						<%= label_tag(:status, "Been there, done that!") %>
-						<%= check_box_tag :status, f.status, true, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
-						<% else %>
-						<%= label_tag(:status, "Gotta see it!") %>
-						<%= check_box_tag :status, f.status, false, disabled: false, :checked_value => true, :unchecked_value => false, :class => 'status-box' %>
-						<% end %>
-				 	<% end %>
-				</div>
-			</div>
-		<% end %>
-	  	</div>
-	</div>
-<% end %>
-</div>
+		    <% l.favorites.each do |f| %>
+		    <div class="col-xs-3"><!-- column start -->
+				<div class="card" data-background="color" data-color="black"><!-- card begin -->        
+	            	<div class="header" style="background-image: url('<%= @photo_prefix + f.img + @key %>'); background-size: cover; background-position: 50% 50%;">
+	                <img src="<%= @photo_prefix + f.img + @key %>">
+	               	<div class="filter"></div>
+		                <div class="social-line" data-buttons="3">
+		                    <button class="btn btn-social">
+		                    <% if f.price_level %>
+		                   	<% price = f.price_level %>
+			                <% for i in 1..price %>
+			                    	$
+			                <% end %>
+			                <% end %>
+		                    </button>
+		                    <button class="btn btn-social">
+		                    <% rating = f["rating"] %>
+		                    <% for i in 1..rating %>
+		                    	<i class="pe-7s-star"></i>
+		                   	<% end %>
+		                    </button>
+			        		<%= bootstrap_form_for :favorite, url: '/places', html: { id: 'addPlace'} do |f| %>
+				              <%= f.submit 'Delete', class: 'btn btn-social'%>
+				          <% end %>
+	                	</div>
+	        		</div>
+			    	<div class="content">
+		            	<h6 class="category"><%= f["categories"][0] %></h6>
+		            	<h4 class="title"><a href="#"><%= f["title"] %></a></h4>
+		            	<p class="description"><%= f["vicinity"] %></p>
+	        		</div>                                           
+	        	</div><!-- card end -->
+			</div><!-- column end -->
+			<% end %> <!-- end favorites loop -->
+		</div><!-- row end -->
+	</div><!-- end location -->
+	<% end %><!-- end locations loop -->
+
+
+</div><!-- end container-->
 
 
 
