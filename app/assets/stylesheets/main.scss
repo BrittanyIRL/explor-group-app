@@ -229,28 +229,23 @@ h2.location {
 	color: white;
 	font-family: 'Roboto', sans-serif;
 	letter-spacing: 2px;
+	
 }
 
 .weatherContainer {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+
 	
 }
-.weatherImage {		
-		width: 100%;
- 		height: 30vw;
- 		opacity: 40%
 
-	}
 
 .location {
-	/*margin-top: -20em;*/
 
 }
+/*@f_background[0]*/
+
 .weather-forecast {
-	/*margin-top: -15em;*/
-	/*height: 55vw;*/
 	.current-conditions {
 		width: 30%;
 		display: inline-block;
