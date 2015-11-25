@@ -1,33 +1,27 @@
-<%= @locations.length %>
-<%= @current_user %>
-
-<% if @locations.length == 0 %>
+<!-- 
 	<div class="emptyUser">
 		<h3>Seems like nothing has been saved. Why not search for some places to visit on your next trip and then save them to come back to later?</h3>		
 		<h2><%= link_to 'Start Exploring', '/' %></h2>
 	</div>
-<% end %>
+ -->
 
-<% if @locations.length != 0 %>
-<div class="container" style="margin-bottom: 150px">
-<!-- location for loop starts -->
+
+<div class="container">
 <% @locations.each do |l| %>
 	<div class="location">
-	
-	  <div class="placesTitle">
-	  <div class="location-favorites">
-	  	<span class="badge"><%= l.favorites.count %> Favorites</span>
-	  </div>
-	  <div class="location-delete">
-	  	<span class="badge">Delete</span>
-	  </div>
-		  <h2>
-		  <%= l.name %>
-		  </h2>
-	  </div>
+	  	<div class="placesTitle">
+		  	<div class="location-favorites">
+		  		<span class="badge"><%= l.favorites.count %> Favorites</span>
+		  	</div>
+			<div class="location-delete">
+				<span class="badge">Delete</span>
+			</div>
+			<h2>
+			  <%= l.name %>
+			</h2>
+	  	</div>
 
-	   <div class="row">
-	   <!-- favorites loop -->
+	   	<div class="row">
 	    <% l.favorites.each do |f| %>
 			<div class="col-sm-6 col-sm-4">
 				<div class="infoBox">
@@ -38,7 +32,6 @@
 					<p><%= f.rating %></p>
 					<% if f.price_level %>
 					<p><%= f.price_level %></p>
-					<!-- <p> link_to 'Delete', places_path, class: 'btn btn-danger', place_id: , method: :delete </p> -->
 					<% end %>
 				</div>
 				<div class="status">
@@ -54,36 +47,21 @@
 				</div>
 			</div>
 		<% end %>
-	  </div>
+	  	</div>
 	</div>
-<% end %>
 <% end %>
 </div>
 
- 
 
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script>
 
-  	$('.status-box').on('click', function(){
-  		console.log('clicked!')
-  		data = $('this').val();
-  		url = "/favorites/" + ""
-  		$.ajax({
-		    url: url,
-		    method: "POST",
-		    data: d,
-		    success: function(resp){ }
-		});
-  	});
+<script>
 
-  
-    $(".location").show().accordion({
-        active: false,
-        autoHeight: false,
-        navigation: true,
-        collapsible: true
-    });
-   
-  </script>
+$(".location").show().accordion({
+    active: false,
+    autoHeight: false,
+    navigation: true,
+    collapsible: true
+});
+
+</script>
 
