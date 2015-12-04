@@ -1,88 +1,67 @@
-<!-- 
-	<div class="emptyUser">
-		<h3>Seems like nothing has been saved. Why not search for some places to visit on your next trip and then save them to come back to later?</h3>		
-		<h2><%= link_to 'Start Exploring', '/' %></h2>
-	</div>
- -->
-
+<!-- <div class="emptyUser">
+	<h3>Seems like nothing has been saved. Why not search for some places to visit on your next trip and then save them to come back to later?</h3>		
+	<h2><%= link_to 'Start Exploring', '/' %></h2>
+</div> -->
 
 <div class="container">
-
-
-
-
 <% @locations.each do |l| %>
-<% if l.favorites[0] %> <!-- only show locations if they have favorites associated with them -->
-	<div class="location">
-	  	<div class="placesTitle">
-		  	<div class="location-favorites">
-		  		<span class="badge"><%= l.favorites.count %> Favorites</span>
+	<% if l.favorites[0] %> <!-- only show locations if they have favorites associated with them -->
+		<div class="location"><!-- begin location -->
+		  	<div class="placesTitle">
+			  	<div class="location-favorites">
+			  		<span class="badge"><%= l.favorites.count %> Favorites</span>
+			  	</div>
+				<h2><%= l.name %></h2>
 		  	</div>
-
-			<h2>
-			  <%= l.name %>
-			</h2>
-	  	</div>
-
-	   	<div class="row">
-		   	<!--<div class="location-delete">
-					<span>
-					< bootstrap_form_for :location, url: "/locations/#{l.id}", method: :delete do |l| >
-					    < l.submit 'Delete' >
-					< end >
-					</span>
-				</div> -->
-		    <% l.favorites.each do |f| %>
-		    <div class="col-xs-3"><!-- column start -->
-				<div class="card" data-background="color" data-color="black"><!-- card begin -->        
-	            	<div class="header" style="background-image: url('<%= @photo_prefix + f.img + @key %>'); background-size: cover; background-position: 50% 50%;">
-	                <img src="<%= @photo_prefix + f.img + @key %>">
-	               	<div class="filter"></div>
-		                <div class="social-line" data-buttons="3">
-		                    <button class="btn btn-social">
-		                    <% if f.price_level %>
-		                   	<% price = f.price_level %>
-			                <% for i in 1..price %>
-			                    	$
-			                <% end %>
-			                <% end %>
-		                    </button>
-		                    <button class="btn btn-social">
-		                    <% rating = f["rating"] %>
-		                    <% for i in 1..rating %>
-		                    	<i class="pe-7s-star"></i>
-		                   	<% end %>
-		                    </button>
-			        		<%= bootstrap_form_for :favorite, url: "/places/#{f.id}", html: { id: 'addPlace'}, method: :delete do |f| %>
-				              <%= f.submit 'Delete', class: 'btn btn-social'%>
-				          <% end %>
-	                	</div>
-	        		</div>
-			    	<div class="content">
-		            	<h6 class="category"><%= f["categories"][0] %></h6>
-		            	<h4 class="title"><a href="#"><%= f["title"] %></a></h4>
-		            	<p class="description"><%= f["vicinity"] %></p>
-	        		</div>                                           
-	        	</div><!-- card end -->
-			</div><!-- column end -->
-			<% end %> <!-- end favorites loop -->
-		</div><!-- row end -->
-	</div><!-- end location -->
+    		<div>
+			    <% l.favorites.each do |f| %>
+			    <div class="col-xs-3"><!-- column start -->
+					<div class="card" data-background="color" data-color="black"><!-- card begin -->        
+		            	<div class="header" style="background-image: url('<%= @photo_prefix + f.img + @key %>'); background-size: cover; background-position: 50% 50%;">
+		                <img src="<%= @photo_prefix + f.img + @key %>">
+		               	<div class="filter"></div>
+			                <div class="social-line" data-buttons="3">
+			                    <button class="btn btn-social">
+				                    <% if f["price_level"] %>
+				                    <% price = f["price_level"] %>
+					                    <% for i in 1..price %>
+					                    	$
+					                    <% end %>
+					                <% else %>
+					                	N/A
+					                <% end %>
+				                </button>
+				                <button class="btn btn-social">
+				                    <% rating = f["rating"] %>
+				                    <% for i in 1..rating %>
+				                    	<span class="star-rating">&#xe013;</span>
+				                   	<% end %>
+				                </button>
+				        		<%= bootstrap_form_for :favorite, url: "/places/#{f.id}", html: { id: 'addPlace'}, method: :delete do |f| %>
+					              <%= f.submit 'Delete', class: 'btn btn-social'%>
+					          <% end %>
+		                	</div>
+		        		</div>
+				    	<div class="content">
+				    		<% categories = f["categories"].split(/\s/) %>
+			            	<h6 class="category"><%= categories[0].gsub(/_/, ' ') %></h6>
+			            	<h4 class="title"><a href="#"><%= f["title"] %></a></h4>
+			            	<p class="description"><%= f["vicinity"] %></p>
+		        		</div>                                           
+		        	</div><!-- card end -->
+				</div><!-- column end -->
+				<% end %> <!-- end favorites loop -->
+			</div><!-- row end -->
+		</div><!-- end location -->
 	<% end %><!-- end if loop -->
 <% end %><!-- end locations loop -->
-
 </div><!-- end container-->
 
-
-
 <script>
-
 $(".location").show().accordion({
     active: false,
     autoHeight: false,
     navigation: true,
     collapsible: true
 });
-
 </script>
-
